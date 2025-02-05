@@ -2,15 +2,12 @@ import React from "react";
 import { Link } from "react-router";
 import styles from "../styles/Nav.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
-
+import logo from "/logos/exotic-goa-nav-logo.png";
 function NavBar() {
   return (
     <nav>
       <div className={styles.logoDiv}>
-        <img
-          src="logos/exotic-goa-nav-logo.png"
-          alt="exotic-goa-luxury-furniture-logo"
-        />
+        <img src={logo} alt="exotic-goa-luxury-furniture-logo" />
       </div>
       <div className={styles.hamburgerMenuContainer}>
         <RxHamburgerMenu className={styles.menuIcon} />

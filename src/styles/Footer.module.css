@@ -86,6 +86,13 @@
   text-decoration: none;
   color: white;
   font-family: "Poppins", sans-serif;
+  transition: 0.4s;
+}
+
+.quickLinks:hover{
+  transition: 0.5s;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.781);
 }
 
 .exploreMoreContiner {

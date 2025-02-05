@@ -69,7 +69,7 @@ function Footer() {
           <div className={styles.exploreMoreContiner}>
             <h5>Explore</h5>
             <Link className={styles.expoloreMoreLink}>FAQ</Link>
-            <Link className={styles.expoloreMoreLink}>Gallery</Link>
+            <Link to={'/exotic-goa-gallery'} className={styles.expoloreMoreLink}>Gallery</Link>
             <Link className={styles.expoloreMoreLink}>Wedding</Link>
             <Link className={styles.expoloreMoreLink}>Mice Corporate</Link>
           </div>

@@ -27,19 +27,22 @@ export const ImageProvider = ({ children }) => {
       "/Pictures/wedding-271.jpg",
     ],
     portfolioMiceCorporate: [
-      "/Pictures/wedding-260.jpg",
-      "/Pictures/wedding-267.jpg",
-      "/Pictures/wedding-271.jpg",
+      "/public/temp/11.jpg",
+      "/public/temp/12.jpg",
+      "/public/temp/13.jpg",
+   
     ],
     portfolioHospitality: [
-      "/Pictures/wedding-260.jpg",
-      "/Pictures/wedding-267.jpg",
-      "/Pictures/wedding-271.jpg",
+     "/public/temp/16.jpg",
+     "/public/temp/17.jpg",
+     "/public/temp/18.jpg",
+   
     ],
     portfolioLuxuryFuniture: [
-      "/Pictures/wedding-260.jpg",
-      "/Pictures/wedding-267.jpg",
-      "/Pictures/wedding-271.jpg",
+      "/public/temp/21.webp",
+      "/public/temp/22.webp",
+      "/public/temp/23.webp",
+     
     ],
     aboutUsCarousel: ["/temp/11.jpg", "/temp/4.jpg", "/temp/7.jpg"],
     weddingsCarousel: ["/temp/2.webp", "/temp/5.jpg", "/temp/8.jpg"],

@@ -10,7 +10,7 @@ function PortfolioImg() {
         <header>Weddings</header>
         <img
           className={styles.underline}
-          src="/dividers/underline.png"
+          src="/public/dividers/underline.svg"
           alt="underline"
         />
         <div
@@ -29,7 +29,7 @@ function PortfolioImg() {
         <header>Mice Corporate</header>
         <img
           className={styles.underline}
-          src="/dividers/underline.png"
+          src="/public/dividers/underline.svg"
           alt="underline"
         />
         <div
@@ -48,7 +48,7 @@ function PortfolioImg() {
         <header>Hospitality</header>
         <img
           className={styles.underline}
-          src="/dividers/underline.png"
+          src="/public/dividers/underline.svg"
           alt="underline"
         />
         <div
@@ -67,7 +67,7 @@ function PortfolioImg() {
         <header>Luxury Furniture</header>
         <img
           className={styles.underline}
-          src="/dividers/underline.png"
+          src="/public/dividers/underline.svg"
           alt="underline"
         />
         <div

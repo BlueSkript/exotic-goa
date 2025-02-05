@@ -114,6 +114,7 @@ function OurServicesPage() {
                   icon={card.icon}
                   index={index}
                   handleCardClick={handleCardClick}
+                  move={index % 2 == 0 ? true : false}
                 />
               );
             })}

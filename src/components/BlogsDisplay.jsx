@@ -6,8 +6,8 @@ import { BlogsProvider, useBlogs } from "../context/BlogsContext";
 import { useImages } from "../context/CarouselContext";
 
 function BlogsDisplay({ blogsKey }) {
-  // const blogs = useBlogs();
-  // const blog = blogs[]
+  const blogs = useBlogs();
+  const blog = blogs[`${blogsKey}`];
   const settings = {
     dots: false,
     infinite: true,
@@ -38,25 +38,33 @@ function BlogsDisplay({ blogsKey }) {
     ],
   };
   return (
-    <BlogsProvider>
+    <div className={styles.blogMainContainer}>
       <div className={styles.navDiv}>
         <NavBar />
       </div>
 
-      <h1>{blogsKey}</h1>
       <Slider {...settings} className={styles.slider}>
-        {blogs["BlogOne"].map((imgs, index) => {
-          return (
-            <div
-              data-aos="fade-left"
-              key={index}
-              className={styles.imgsContainer}>
-              <img src={imgs} />
-            </div>
-          );
-        })}
+        {blog.images.map((img, index) => (
+          <img key={index} src={img} alt={`Blog ${index}`} width="100" />
+        ))}
       </Slider>
-    </BlogsProvider>
+      <div className={styles.contentContainer}>
+        <header>{blog.heading}</header>
+        <p>
+          {blog.content.split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </p>
+      </div>
+      <img
+          src="/dividers/footer-divider.svg"
+          alt="divider"
+          className={styles.footerDivider}
+        />
+    </div>
   );
 }
 
