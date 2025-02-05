@@ -4,11 +4,12 @@ import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router";
 import { BlogsProvider, useBlogs } from "../context/BlogsContext";
 function BlogsPage() {
-  // const blogs = useBlogs();
+  const blogs = useBlogs();
+  console.log(blogs);
   // const navigate = useNavigate();
   const handleReadMoreClick = (key) => {
     // navigate(blogs[`${key}`].route);
-    console.log('key press');
+    console.log("key press");
   };
   return (
     <>
@@ -38,30 +39,8 @@ function BlogsPage() {
               Read more
             </button>
           </div>
-          <div className={styles.blogsCard}>
-            <div className={styles.blogsImgContainer}>
-              <img src="/temp/23.webp" alt="blogs" />
-              <div className={styles.blogsDateContainer}>
-                <header>09</header>
-                <span>Nov</span>
-              </div>
-            </div>
 
-            <a>From Concept to Celebration – We’ve Got You Covered!</a>
-            <button>Read more</button>
-          </div>
-          <div className={styles.blogsCard}>
-            <div className={styles.blogsImgContainer}>
-              <img src="/temp/25.jpg" alt="blogs" />
-              <div className={styles.blogsDateContainer}>
-                <header>14</header>
-                <span>Jan</span>
-              </div>
-            </div>
-
-            <a>Say 'I Do' to Stress-Free Wedding Planning!</a>
-            <button>Read more</button>
-          </div>
+         
         </div>
       </div>
 
