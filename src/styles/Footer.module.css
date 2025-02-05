@@ -1,0 +1,221 @@
+.footer {
+  width: 100%;
+  position: relative;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.footserContainerOne {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.footserContainerOne h5 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.logoDiv {
+  width: 20%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.socialsIconsContainer {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoDivDesc {
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.socialsIconsContainer span {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: 0.5s;
+}
+
+.socialsIconsContainer span:hover {
+  background-color: transparent;
+  color: white;
+  transition: 0.3s;
+}
+
+.logoDiv img {
+  width: 70%;
+  display: block;
+}
+
+.quickLinksContainer {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.quickLinks {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.exploreMoreContiner {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.expoloreMoreLink {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.instagramContainerFooter {
+  width: 20%;
+}
+
+.instaImgsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.instaImgSubContainer {
+  width: 80px;
+  height: 80px;
+
+  transition: 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.instaImgOne {
+  background-image: url("/Pictures/wedding-267.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.instaImgTwo {
+  background-image: url("/Pictures/wedding-516.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.instaImgThree {
+  background-image: url("/Pictures/wedding-521.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.instaImgFour {
+  background-image: url("/Pictures/wedding-514.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.instaImgFive {
+  background-image: url("/Pictures/wedding-260.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.instaImgSix {
+  background-image: url("/Pictures/wedding-271.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footerInstaContainer {
+  font-size: 2rem;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.instaIcon {
+  opacity: 0;
+}
+
+.footerInstaContainer:hover {
+  background-color: rgba(0, 0, 0, 0.425);
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.footerInstaContainer:hover .instaIcon {
+  color: white;
+  opacity: 1;
+}
+
+.footerContainerTwo {
+  width: 70%;
+  border-top: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.copyrightsContainer span {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.policiesContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.policiesContainer span {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,357 @@
+.carouselContainer {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.imgsSlide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.imgsSlide img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: bottom;
+  opacity: 1;
+}
+
+.weddingsInGoaContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 0;
+  gap: 2rem;
+}
+
+.weddingsInGoaContainer p {
+  width: 50%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.weddingsReelsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.reelContainer {
+  width: 16%;
+  place-items: center;
+}
+
+.reelHeadijng {
+  width: 90%;
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 1rem;
+  font-style: italic;
+  /* transform: translateY(50px); */
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 1;
+  scale: 1;
+  text-align: center;
+  clip-path: polygon(
+    15px 0%,
+    calc(100% - 15px) 0%,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0% 50%
+  );
+  padding: 4px 0;
+}
+
+/* .reelContainer:hover .reelHeadijng{
+  transform: translateY(0px);
+  transition: 0.3s;
+  scale: 1;
+  opacity: 1;
+} */
+.weddingsReelsContainer video {
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolioContainer {
+  width: 100%;
+  place-items: center;
+  background-color: var(--secondary-color);
+  position: relative;
+  padding: 4rem 0 6rem 0;
+}
+
+.portfolio {
+  width: 80%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  place-items: center;
+  padding: 4rem 0;
+  transition: 0.5s;
+}
+
+.portfolioOne {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: 0.5s;
+}
+
+.portfolioRowOne {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.portfolioCardHeadingContainer {
+  width: 39%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* border-radius: 30px; */
+  background-color: peachpuff;
+  transition: 0.5s;
+  background-image: url("/dividers/frame.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portfolioCardHeadingContainer header {
+  font-family: "Slight", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.portfolioCardHeadingContainer img {
+  width: 100%;
+  scale: 1.2;
+}
+
+.rowOneImgContainer {
+  width: 100%;
+  height: 48%;
+  background-color: peachpuff;
+  padding: 1rem;
+  /* border-radius: 30px; */
+}
+.rowOneImgContainer img {
+  /* border-radius: 80px; */
+  border-top-right-radius: 550px;
+  border-bottom-right-radius: 550px;
+  transition: 0.5s ease-in-out;
+}
+.rowOneImgContainerTwo {
+  width: 100%;
+  height: 48%;
+  background-color: peachpuff;
+  padding: 1rem;
+  /* border-radius: 30px; */
+  transition: 0.5s;
+}
+
+.rowOneImgContainerTwo img {
+  /* border-radius: 80px; */
+  border-top-left-radius: 550px;
+  border-bottom-left-radius: 550px;
+  transition: 0.7s ease-in-out;
+}
+
+.cardBottomBorder {
+  transform: rotate(180deg);
+}
+
+.imgsSectionOne {
+  width: 59%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.imgsSectionOne img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rowTwo {
+  width: 100%;
+  /* border-radius: 30px; */
+  padding: 1rem;
+  background-color: peachpuff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+  gap: 1rem;
+}
+
+.rowTwoSub {
+  width: 100%;
+  height: 50%;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rowTwoImgContainer:nth-child(1) {
+  width: 58%;
+  /* padding: 1rem; */
+}
+.rowTwoImgContainer:nth-child(2) {
+  width: 38%;
+  /* padding: 1rem; */
+  /* background-color: red; */
+}
+
+.rowTwoSub img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  /* border-radius: 30px; */
+}
+
+.rowTwoPortfolioTwo img {
+  /* border-radius: 1000px; */
+  border-bottom-left-radius: 10000px;
+  border-bottom-right-radius: 10000px;
+  transition: all 0.7s ease-in-out;
+  will-change: border-radius, transform;
+}
+
+.rowTwo header {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--primary-color);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.portfolioOne:hover .rowOneImgContainerTwo,
+.portfolioOne:hover .rowOneImgContainer,
+.portfolioOne:hover .portfolioCardHeadingContainer,
+.portfolioOne:hover .rowTwo {
+  transition: 0.5s;
+  /* background-color: rgb(248, 226, 207);
+   */
+  background-color: rgba(255, 218, 185, 0.37);
+}
+
+.rowOneImgContainer img,
+.rowOneImgContainerTwo img,
+.rowTwoPortfolioTwo img,
+.rowTwoPortfolio img {
+  transition: all 1s ease-in-out;
+  will-change: border-radius, transform;
+}
+
+.portfolioOne:hover .rowOneImgContainer img,
+.portfolioOne:hover .rowOneImgContainerTwo img,
+.portfolioOne:hover .rowTwoPortfolioTwo img,
+.portfolioOne:hover .rowTwoPortfolio img {
+  border-radius: 30px;
+  transform: scale(1.02);
+  transition: 0.9s;
+}
+
+.testimonialsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 10rem 0;
+  gap: 4rem;
+  position: relative;
+}
+
+.testimonialsContainer h3 {
+  font-family: "Slight", sans-serif;
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 550;
+}
+
+.testimonialsSubContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.testimonialsSubContainer img {
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimonialContent {
+  width: 45%;
+
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonialContent span {
+  font-size: 1.1rem;
+  height: 80%;
+  text-align: justify;
+}
+
+.testimonialContent header {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+.blob {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.footerDivider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}

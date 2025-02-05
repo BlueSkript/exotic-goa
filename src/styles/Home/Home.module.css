@@ -1,0 +1,283 @@
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.titleContainer h2 {
+  color: var(--primary-color);
+  font-family: "Slight", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.subtitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.subtitleContainer span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.subtitleBar {
+  width: 90px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+
+.homeCarouselContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.weddingsSection {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+}
+
+.weddingDescriptionHome {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weddingDescriptionHome p {
+  width: 40%;
+  text-align: center;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.corporateContainer {
+  width: 100%;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.blob {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.corporateDescContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.corporateDescContainer p {
+  width: 40%;
+  text-align: center;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.portfolioContainer {
+  width: 100%;
+  padding: 4rem 0rem 10rem 0rem;
+
+  position: relative;
+}
+
+.ourFeaturedContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--secondary-color);
+  padding: 4rem 0rem 10rem 0rem;
+}
+
+.reelsContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+
+  position: relative;
+  z-index: 2;
+}
+
+.reel {
+  width: 300px;
+}
+.reelBorderOne {
+  position: absolute;
+  width: 20%;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  transform: translate(-20%, -50%) rotate(-45deg) scale(1.8);
+}
+
+.reelBorderTwo {
+  position: absolute;
+  width: 20%;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+
+  transform: translate(50%, 20%) rotate(135deg) scale(1.8);
+}
+
+.footerDivider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.instagramSection {
+  width: 100%;
+  position: relative;
+  padding: 4rem 0rem 14rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.instagramImgConainer {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.instagramImgConainer a{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.instagramImgConainer img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  opacity: 1;
+
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.instagramImgDiv {
+  width: 30%;
+  height: 350px;
+  transition: 0.5s;
+  background-color: var(--primary-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.instagramImgDiv a{
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  z-index: 45;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagramImgDiv:hover img {
+  opacity: 0.4;
+  transition: 0.3s;
+  scale: 1.05;
+}
+
+.instagramImgDivIcon {
+  
+  top: 50%;
+  left: 50%;
+
+  font-size: 2.4rem;
+  color: white;
+  opacity: 0;
+  z-index: 1;
+  scale: 0.5;
+  transition: 0.5s;
+  transform-origin: center;
+ 
+}
+
+.instagramImgDiv:hover .instagramImgDivIcon {
+  opacity: 1;
+  scale: 1;
+  transition: 0.3s;
+  transform-origin: center;
+}
+
+.instatitleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.instatitleContainer h2 {
+  color: var(--primary-color);
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.instasubtitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.instasubtitleContainer span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.instasubtitleBar {
+  width: 90px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+

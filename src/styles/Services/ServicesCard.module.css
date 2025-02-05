@@ -1,0 +1,62 @@
+.servicecard {
+  background-color: var(--secondary-color);
+  width: 260px;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: 0.5s;
+}
+
+.servicecard:hover{
+  scale: 1.07;
+  cursor: pointer;
+}
+
+.iconContiner {
+  display: inline;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.servicecard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.servicecard h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+}
+
+.servicecard p {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  text-align: left;
+}
+
+.servicecard:hover {
+  transition: 0.3s;
+  background-color: var(--primary-color);
+
+}
+.servicecard:hover h3{
+  transition: 0.3s;
+  color: white;
+}
+
+.servicecard:hover p{
+  color: white;
+}
+

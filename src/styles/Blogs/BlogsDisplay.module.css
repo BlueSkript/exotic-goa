@@ -1,0 +1,34 @@
+.slider {
+  width: 60%;
+  overflow: hidden;
+  height: 60vh;
+  margin: 2rem auto;
+
+  outline: none;
+  border: none;
+  margin: 10rem auto;
+}
+
+
+.imgsContainer {
+  outline: none;
+  border: none;
+}
+
+.imgsContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+  margin: 0 auto;
+object-position: top;
+  outline: none;
+  border: none;
+  scale: 1;
+  transition: 0.5s;
+}
+
+.imgsContainer img:hover {
+  scale: 1.03;
+  transition: 0.5s;
+}

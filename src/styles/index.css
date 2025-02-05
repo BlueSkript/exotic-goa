@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #b38739;
+  --secondary-color: #f9f5ea;
+  --text-color: #5e6e5f;
+  --text-secondary: white;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+  border-radius: 5px;
+}
+
+body {
+  overflow-x: hidden;
+  cursor: url("/cursor.png"), default;
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@font-face {
+  font-family: "Slight";
+  src: url("../assets/fonts/slight-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

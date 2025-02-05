@@ -1,0 +1,259 @@
+.aboutUsLanding {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  padding: 8rem 0;
+}
+
+.aboutusLandingContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.aboutusLandingContainer h3 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.aboutusLandingContainer p {
+  width: 60%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.aboutUsLandingHeadingTwo {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aboutUsLandingHeadingTwo span {
+  width: 10%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.aboutUsLandingHeadingTwo h3 {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.blob {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  
+}
+
+.blobTwo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.founderContainer {
+  width: 100%;
+  background-color: var(--secondary-color);
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.founderImgDiv {
+  width: 30%;
+}
+
+.founderSubContainer {
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.founderImgDiv img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border :8px solid var(--primary-color);
+}
+
+.founderDescriptionContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.founderDescriptionContainer h3 {
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.founderDescriptionContainer header {
+  font-family: "Slight", sans-serif;
+  font-weight: 550;
+  text-align: left;
+}
+
+.founderDescriptionContainer p {
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.instagramSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 0;
+  position: relative;
+}
+
+.instagramSubSection {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.headingContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.headingContainer header {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 3rem;
+}
+
+.subHeading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
+  display: block;
+}
+
+.instagramPicturesContainer {
+  width: 60%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  height: auto;
+}
+
+
+
+
+
+
+.instagramImgDiv {
+  width: 30%;
+
+  transition: 0.5s;
+  background-color: var(--primary-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+ 
+}
+
+.instagramImgDiv img{
+  width: 100%;
+  aspect-ratio: 1;
+  transition: 0.5s;
+}
+
+.instagramImgDiv a{
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  z-index: 45;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagramImgDiv:hover img {
+  opacity: 0.4;
+  transition: 0.3s;
+  scale: 1.05;
+
+}
+
+.instagramImgDivIcon {
+  
+  top: 50%;
+  left: 50%;
+
+  font-size: 2.4rem;
+  color: white;
+  opacity: 0;
+  z-index: 1;
+  scale: 0.5;
+  transition: 0.5s;
+  transform-origin: center;
+ 
+}
+
+.instagramImgDiv:hover .instagramImgDivIcon {
+  opacity: 1;
+  scale: 1;
+  transition: 0.3s;
+  transform-origin: center;
+}

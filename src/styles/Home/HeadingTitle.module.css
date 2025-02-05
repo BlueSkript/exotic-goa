@@ -1,0 +1,33 @@
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.titleContainer h2 {
+  color: var(--primary-color);
+  font-family: "Slight", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.subtitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.subtitleContainer span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.subtitleBar {
+  width: 90px;
+  height: 2px;
+  background-color: var(--primary-color);
+}

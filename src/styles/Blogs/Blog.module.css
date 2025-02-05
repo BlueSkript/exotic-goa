@@ -1,0 +1,138 @@
+.videoContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.videoContainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blogsSubContainer {
+  width: 70%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+
+.blogsContainer{
+  padding: 4rem 0;
+  /* position: absolute; */
+}
+
+.blogsContainer header{
+  font-family: 'Slight', sans-serif;
+  font-weight: 550;
+  font-size: 2.5rem;
+}
+.blogsCard {
+  width: 25%;
+  background-color: var(--primary-color);
+
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.blogsCard:hover{
+  background-color: #cca35c;
+  
+  transition: 0.5s;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.288);
+}
+
+.blogsCard a{
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.blogsCard button{
+  width: 60%;
+  border: none;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--primary-color);
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.301);
+  transition: 0.5s;
+}
+
+.blogsCard button:hover{
+  cursor: pointer;
+  color: black;
+  transition: 0.5s;
+  scale: 0.9;
+}
+
+.blogsImgContainer {
+  width: 100%;
+  position: relative;
+}
+
+.blogsCard img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.5s;
+
+}
+
+.blogsDateContainer {
+  background-color: white;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  transform: translate(25%, 25%);
+}
+
+.blogsCard:hover img{
+/* transform: rotate(2deg); */
+transition: 0.3s;
+scale: 1.09;
+}
+
+.blogsDateContainer header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.footerDiv{
+  width: 100%;
+  position: relative;
+}
+
+
+.footerDivider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
