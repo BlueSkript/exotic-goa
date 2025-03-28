@@ -92,8 +92,7 @@ function HomeCarousel() {
             initial={{ opacity: 0, translateX: 70 }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}>
-            Kind words from <br />
-            our clients
+           Where Every Celebration <br /> Becomes a Timeless Experience!
           </motion.h5>
         </div>
       </motion.div>
