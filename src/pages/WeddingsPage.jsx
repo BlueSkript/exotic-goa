@@ -11,6 +11,10 @@ import img21 from "/temp/21.webp";
 import img19 from "/temp/19.webp";
 import img20 from "/temp/20.webp";
 
+import howWeDoItOne from "/public/Pictures/howwedoitone.gif";
+import howWeDoItTwo from "/public/Pictures/howwedoittwo.gif";
+import howWeDoItThree from "/public/Pictures/howwedoitthree.gif";
+
 const images = [
   { src: img10, text: "Exotic Goa" },
   { src: img11, text: "Exotic Goa Hospitality" },
@@ -216,7 +220,7 @@ function WeddingsPage() {
 
         <div className={styles.howWeDoItSubContainer}>
           <div className={styles.howWeDoItItemContainer}>
-            <img src="/public/Pictures/howwedoitone.gif" alt="" />
+            <img src={howWeDoItOne} alt="" />
             <header>Plan</header>
             <p>
               Once we’ve envisioned the story you wish to tell, we begin by
@@ -225,7 +229,7 @@ function WeddingsPage() {
             </p>
           </div>
           <div className={styles.howWeDoItItemContainer}>
-            <img src="/public/Pictures/howwedoittwo.gif" alt="" />
+            <img src={howWeDoItTwo} alt="" />
             <header>connect</header>
             <p>
               We make sure you’re equipped with the best artists in the
@@ -234,7 +238,7 @@ function WeddingsPage() {
             </p>
           </div>
           <div className={styles.howWeDoItItemContainer}>
-            <img src="/public/Pictures/howwedoitthree.gif" alt="" />
+            <img src={howWeDoItThree} alt="" />
             <header>Design</header>
             <p>
               Whether you’re looking for an extravagant or an intimate wedding,

@@ -1,12 +1,18 @@
 import { useState } from "react";
 import styles from "../../styles/Home/PortfolioGallery.module.css";
 
+import img1 from "/public/temp/10.jpg";
+import img2 from "/public/temp/9.jpg";
+import img3 from "/public/temp/13.jpg";
+import img4 from "/public/temp/21.webp";
+import img5 from "/public/temp/19.webp";
+
 const images = [
-  { src: "/public/temp/10.jpg", text: "Exotic Goa " },
-  { src: "/public/temp/9.jpg", text: "Exotic Goa hospitality" },
-  { src: "/public/temp/13.jpg", text: "Exotic Goa Decor" },
-  { src: "/public/temp/21.webp", text: "Exotic Goa Mice" },
-  { src: "/public/temp/19.webp", text: "Exotic Goa Furniture" },
+  { src: img1, text: "Exotic Goa " },
+  { src: img2, text: "Exotic Goa hospitality" },
+  { src: img3, text: "Exotic Goa Decor" },
+  { src: img4, text: "Exotic Goa Mice" },
+  { src: img5, text: "Exotic Goa Furniture" },
 ];
 
 export default function PortfolioGallery() {
