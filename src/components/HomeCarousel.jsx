@@ -59,12 +59,15 @@ function HomeCarousel() {
               <h1>Exotic Goa</h1>
               <p>
                 Wedding Management | Decor <br />
-                Mice Global | Luxury Furniture
+                Mice Global | Luxury Furniture <br />
+                India, Goa
               </p>
             </div>
             <header>We create experiences</header>
-
-            <a className={styles.homeContactUsBtn} href="">Contact Us</a>
+            <p>India, Goa</p>
+            <a className={styles.homeContactUsBtn} href="">
+              Contact Us
+            </a>
           </motion.div>
           {/* <motion.div
             initial={{ opacity: 0, translateX: -70 }}
