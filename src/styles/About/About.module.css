@@ -2,36 +2,37 @@
   width: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 4em;
+  align-items: stretch;
+  gap: 1rem;
   padding: 8rem 0;
 }
 
 .aboutusLandingContainer {
-  width: 60%;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 }
 
 .aboutusLandingContainer h3 {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
   color: var(--primary-color);
-  font-style: italic;
+
   font-size: 2rem;
 }
 
 .aboutusLandingContainer p {
-  width: 60%;
+  width: 90%;
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
+  text-align: center;
 }
 
 .aboutUsLandingHeadingTwo {
@@ -52,7 +53,8 @@
 .aboutUsLandingHeadingTwo h3 {
   background-color: var(--primary-color);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
   font-size: 1.2rem;
   padding: 1rem;
 }
@@ -62,7 +64,6 @@
   position: absolute;
   top: 0;
   transform: translateY(-100%);
-  
 }
 
 .blobTwo {
@@ -74,7 +75,7 @@
 
 .founderContainer {
   width: 100%;
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   position: relative;
 
   display: flex;
@@ -97,12 +98,30 @@
   align-items: center;
   gap: 5%;
 }
+
+.founderImgDiv {
+  position: relative;
+  z-index: 1;
+}
 .founderImgDiv img {
   width: 100%;
-  height: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border :8px solid var(--primary-color);
+  border-radius: 20px;
+  /* box-shadow: 20px 20px 0px 0px #b38639ba; */
+  display: block;
+  height: auto;
+  z-index: 1;
+}
+
+.founderImgDiv::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: #b386393f;
+  border-radius: 16px;
+  right: -30px;
+  bottom: -30px;
+  z-index: -1;
 }
 
 .founderDescriptionContainer {
@@ -110,17 +129,23 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: flex-start;
 }
 
 .founderDescriptionContainer h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--primary-color);
   font-weight: 400;
-  color: var(--text-color);
+  font-size: 1.2rem;
 }
 
 .founderDescriptionContainer header {
-  font-family: "Slight", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 550;
+  width: 100%;
+  color: black;
   text-align: left;
+  font-size: 1.4rem;
 }
 
 .founderDescriptionContainer p {
@@ -159,9 +184,11 @@
 }
 
 .headingContainer header {
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
+ 
   font-size: 3rem;
+  color: var(--primary-color);
 }
 
 .subHeading {
@@ -192,11 +219,6 @@
   height: auto;
 }
 
-
-
-
-
-
 .instagramImgDiv {
   width: 30%;
 
@@ -208,16 +230,17 @@
   align-items: center;
   overflow: hidden;
   border-radius: 10px;
- 
 }
 
-.instagramImgDiv img{
+.instagramImgDiv img {
   width: 100%;
   aspect-ratio: 1;
   transition: 0.5s;
 }
 
-.instagramImgDiv a{
+
+
+.instagramImgDiv a {
   display: block;
   width: 100%;
   height: 100%;
@@ -233,11 +256,9 @@
   opacity: 0.4;
   transition: 0.3s;
   scale: 1.05;
-
 }
 
 .instagramImgDivIcon {
-  
   top: 50%;
   left: 50%;
 
@@ -248,7 +269,6 @@
   scale: 0.5;
   transition: 0.5s;
   transform-origin: center;
- 
 }
 
 .instagramImgDiv:hover .instagramImgDivIcon {

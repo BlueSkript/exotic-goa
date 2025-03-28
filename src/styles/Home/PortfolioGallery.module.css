@@ -1,0 +1,59 @@
+.galleryContainer {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.imageWrapper {
+  flex: 1;
+  cursor: pointer;
+  transition: flex 0.5s ease-in-out;
+  position: relative;
+}
+
+.imageWrapper.expanded {
+  flex: 7;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imageText {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  text-transform: capitalize;
+}
+
+.imageTextInactive {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: white;
+
+  text-transform: capitalize;
+  writing-mode: sideways-lr;
+  text-orientation: sideways-right;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.656));
+}

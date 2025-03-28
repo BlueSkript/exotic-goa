@@ -1,0 +1,161 @@
+.moodboardContainer {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 6rem 0 10rem 0;
+  position: relative;
+}
+
+.headingContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headingContainer span {
+  width: 50%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.moodboardContainer h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  font-weight: 550;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.moodboardSubContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.moodboardCard {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+/* .moodboardCard:hover{
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+} */
+
+.moodBoardImg {
+  width: 50%;
+}
+
+.moodBoardImg img {
+  width: 100%;
+  /* border-radius: 20px; */
+}
+
+.moodColorsContainer {
+  width: 50%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.moodColorsContainer div {
+  width: 100px;
+  height: 100px;
+  /* border-radius: 20px; */
+  display: block;
+}
+
+.moodColorContainerOne div:nth-child(1) {
+  background-color: rgb(238, 209, 43);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerOne div:nth-child(2) {
+  background-color: rgb(67, 77, 10);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerOne div:nth-child(3) {
+  background-color: rgb(225, 159, 30);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerOne div:nth-child(4) {
+  background-color: rgb(223, 205, 179);
+  border: 4px solid rgb(239, 238, 238);
+}
+
+.moodColorContainerTwo div:nth-child(1) {
+  background-color: rgb(243, 234, 216);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerTwo div:nth-child(2) {
+  background-color: rgb(242, 188, 212);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerTwo div:nth-child(3) {
+  background-color: rgb(197, 104, 122);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerTwo div:nth-child(4) {
+  background-color: rgb(202, 59, 123);
+  border: 4px solid rgb(239, 238, 238);
+}
+
+.moodColorContainerThree div:nth-child(1) {
+  background-color: rgb(148, 144, 204);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerThree div:nth-child(2) {
+  background-color: rgb(196, 189, 144);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerThree div:nth-child(3) {
+  background-color: rgb(209, 204, 198);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerThree div:nth-child(4) {
+  background-color: rgb(215, 208, 222);
+  border: 4px solid rgb(239, 238, 238);
+}
+
+.moodColorContainerFour div:nth-child(1) {
+  background-color: rgb(111, 116, 32);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerFour div:nth-child(2) {
+  background-color: rgb(247, 181, 24);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerFour div:nth-child(3) {
+  background-color: rgb(255, 207, 97);
+  border: 4px solid rgb(239, 238, 238);
+}
+.moodColorContainerFour div:nth-child(4) {
+  background-color: rgb(255, 219, 133);
+  border: 4px solid rgb(239, 238, 238);
+}
+
+.footerDivider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}

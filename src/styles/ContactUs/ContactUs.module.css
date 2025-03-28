@@ -18,10 +18,10 @@
 
 .formContainer h3 {
   text-align: center;
-  font-family: "Slight", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   color: var(--primary-color);
-  font-weight: 550;
+  font-weight: 350;
 }
 .formSubContainer {
   display: flex;
@@ -73,12 +73,14 @@
   background-color: var(--secondary-color);
   border-radius: 30px;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.171);
+  border: 1px solid rgba(0, 0, 0, 0.082);
   padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+  scale: 0.8;
 }
 .formHeadingContainer header {
   font-family: "Poppins", sans-serif;

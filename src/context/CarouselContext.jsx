@@ -30,21 +30,18 @@ export const ImageProvider = ({ children }) => {
       "/public/temp/11.jpg",
       "/public/temp/12.jpg",
       "/public/temp/13.jpg",
-   
     ],
     portfolioHospitality: [
-     "/public/temp/16.jpg",
-     "/public/temp/17.jpg",
-     "/public/temp/18.jpg",
-   
+      "/public/temp/16.jpg",
+      "/public/temp/17.jpg",
+      "/public/temp/18.jpg",
     ],
     portfolioLuxuryFuniture: [
       "/public/temp/21.webp",
       "/public/temp/22.webp",
       "/public/temp/23.webp",
-     
     ],
-    aboutUsCarousel: ["/temp/11.jpg", "/temp/4.jpg", "/temp/7.jpg"],
+    aboutUsCarousel: ["/public/temp/1.webp", "/temp/4.jpg", "/temp/7.jpg"],
     weddingsCarousel: ["/temp/2.webp", "/temp/5.jpg", "/temp/8.jpg"],
     corporateCarousel: ["/temp/8.jpg", "/temp/9.jpg", "/temp/10.jpg"],
     servicesCarousel: ["/temp/16.jpg", "/temp/17.jpg", "/temp/18.jpg"],

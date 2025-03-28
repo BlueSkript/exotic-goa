@@ -59,11 +59,11 @@ function BlogsDisplay({ blogsKey }) {
           ))}
         </p>
       </div>
-      <img
+      {/* <img
           src="/dividers/footer-divider.svg"
           alt="divider"
           className={styles.footerDivider}
-        />
+        /> */}
     </div>
   );
 }

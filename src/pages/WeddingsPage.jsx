@@ -2,7 +2,43 @@ import React from "react";
 import WeddingsCarousel from "../components/weddings/WeddingsCarousel";
 import HeadingTItle from "../components/Home/HeadingTItle";
 import styles from "../styles/weddings/WeddingsPage.module.css";
+import { BsWhatsapp } from "react-icons/bs";
+import { useState, useEffect } from "react";
+import img10 from "/temp/10.jpg";
+import img11 from "/temp/11.jpg";
+import img13 from "/temp/13.jpg";
+import img21 from "/temp/21.webp";
+import img19 from "/temp/19.webp";
+import img20 from "/temp/20.webp";
+
+const images = [
+  { src: img10, text: "Exotic Goa" },
+  { src: img11, text: "Exotic Goa Hospitality" },
+  { src: img13, text: "Exotic Goa Decor" },
+  { src: img21, text: "Exotic Goa MICE" },
+  { src: img19, text: "Exotic Goa Furniture" },
+  { src: img20, text: "Exotic Goa Events" },
+  { src: img10, text: "Exotic Goa" },
+  { src: img11, text: "Exotic Goa Hospitality" },
+  { src: img13, text: "Exotic Goa Decor" },
+  { src: img21, text: "Exotic Goa MICE" },
+  { src: img19, text: "Exotic Goa Furniture" },
+  { src: img20, text: "Exotic Goa Events" },
+  { src: img10, text: "Exotic Goa" },
+  { src: img11, text: "Exotic Goa Hospitality" },
+  { src: img13, text: "Exotic Goa Decor" },
+  { src: img21, text: "Exotic Goa MICE" },
+  { src: img19, text: "Exotic Goa Furniture" },
+  { src: img20, text: "Exotic Goa Events" },
+];
+const speed = 30;
 function WeddingsPage() {
+  const [duplicatedItems, setDuplicatedItems] = useState([]);
+
+  useEffect(() => {
+    setDuplicatedItems([...images, ...images]);
+  }, [images]);
+
   return (
     <>
       <WeddingsCarousel />
@@ -71,7 +107,7 @@ function WeddingsPage() {
         </div>
       </div>
 
-      <div className={styles.portfolioContainer}>
+      {/* <div className={styles.portfolioContainer}>
         <img
           src="/dividers/corporate-divider.svg"
           alt="page-divider"
@@ -161,26 +197,82 @@ function WeddingsPage() {
                 <div className={styles.rowTwoImgContainer}>
                   <img
                     className={styles.rowTowImgOne}
-                    src="/temp/9.jpg"
+                    src="/public/temp/25.jpg"
                     alt=""
                   />
                 </div>
                 <div className={styles.rowTwoImgContainer}>
-                  <img src="/temp/10.jpg" alt="" />
+                  <img src="/temp/24.webp" alt="" />
                 </div>
               </div>
               <header>"Capturing timeless moments of love and joy."</header>
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div className={styles.howWeDoItContainer}>
+        <h5>How we do it</h5>
+
+        <div className={styles.howWeDoItSubContainer}>
+          <div className={styles.howWeDoItItemContainer}>
+            <img src="/public/Pictures/howwedoitone.gif" alt="" />
+            <header>Plan</header>
+            <p>
+              Once we’ve envisioned the story you wish to tell, we begin by
+              meticulously planning everything, right from the venue to hampers
+              and budget planning.
+            </p>
+          </div>
+          <div className={styles.howWeDoItItemContainer}>
+            <img src="/public/Pictures/howwedoittwo.gif" alt="" />
+            <header>connect</header>
+            <p>
+              We make sure you’re equipped with the best artists in the
+              business- skilled photographers, makeup artists, DJs and more,
+              based on what’s right for you and your wedding.
+            </p>
+          </div>
+          <div className={styles.howWeDoItItemContainer}>
+            <img src="/public/Pictures/howwedoitthree.gif" alt="" />
+            <header>Design</header>
+            <p>
+              Whether you’re looking for an extravagant or an intimate wedding,
+              we beautifully craft everything from set design to sound, lights
+              and flowers.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.getInTouchContainer}>
+          <a href="">
+            <h6>Get in touch</h6>
+            <BsWhatsapp className={styles.whatsappicon} />
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.venuesWeHaveWorkedWith}>
+        <h4>Venues We Do Weddings At</h4>
+        <div className={styles.carousel}>
+          <div
+            className={styles.carouseltrack}
+            style={{ animationDuration: `${speed}s` }}>
+            {duplicatedItems.map((item, index) => (
+              <div className={styles.carouselitem} key={index}>
+                <img src={item.src} alt={`Item ${index}`} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className={styles.testimonialsContainer}>
-        <img
+        {/* <img
           src="/dividers/portfolio-divider.svg"
           alt="page-divider"
           className={styles.blob}
-        />
+        /> */}
         <h3>Testimonials</h3>
 
         <div className={styles.testimonialsSubContainer}>
@@ -200,11 +292,11 @@ function WeddingsPage() {
             <header>- Maithili Parikh</header>
           </div>
         </div>
-        <img
+        {/* <img
           src="/dividers/footer-divider.svg"
           alt="divider"
           className={styles.footerDivider}
-        />
+        /> */}
       </div>
     </>
   );

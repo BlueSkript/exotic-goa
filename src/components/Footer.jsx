@@ -11,33 +11,29 @@ function Footer() {
   return (
     <>
       <footer className={styles.footer}>
+        <img className={styles.footerLogo} src="/public/logos/exotic-goa-logo.png" alt="" />
+        <span className={styles.logoDivDesc}>
+          Welcome to Exotic Goa Events, a luxurious event company situated in
+          the city of Margao.
+        </span>
+        <div className={styles.socialsIconsContainer}>
+          <span className={styles.iconContainer}>
+            <CiTwitter className={styles.icon} />
+          </span>
+          <span className={styles.iconContainer}>
+            <FaFacebookF className={styles.icon} />
+          </span>
+          <span className={styles.iconContainer}>
+            <FaYoutube className={styles.icon} />
+          </span>
+          <span className={styles.iconContainer}>
+            <FaInstagram className={styles.icon} />
+          </span>
+          <span className={styles.iconContainer}>
+            <FaLinkedinIn className={styles.icon} />
+          </span>
+        </div>
         <div className={styles.footserContainerOne}>
-          <div className={styles.logoDiv}>
-            <img src="/logos/exotic-goa-nav-logo.png" alt="" />
-            <span className={styles.logoDivDesc}>
-              Welcome to Exotic Goa Events, a luxurious event company situated
-              in the city of Margao.
-            </span>
-
-            <div className={styles.socialsIconsContainer}>
-              <span className={styles.iconContainer}>
-                <CiTwitter />
-              </span>
-              <span className={styles.iconContainer}>
-                <FaFacebookF />
-              </span>
-              <span className={styles.iconContainer}>
-                <FaYoutube />
-              </span>
-              <span className={styles.iconContainer}>
-                <FaInstagram />
-              </span>
-              <span className={styles.iconContainer}>
-                <FaLinkedinIn />
-              </span>
-            </div>
-          </div>
-
           <div className={styles.quickLinksContainer}>
             <h5>Quick Links</h5>
             <Link className={styles.quickLinks} to={"/"}>
@@ -69,9 +65,16 @@ function Footer() {
           <div className={styles.exploreMoreContiner}>
             <h5>Explore</h5>
             <Link className={styles.expoloreMoreLink}>FAQ</Link>
-            <Link to={'/exotic-goa-gallery'} className={styles.expoloreMoreLink}>Gallery</Link>
+            <Link
+              to={"/exotic-goa-gallery"}
+              className={styles.expoloreMoreLink}>
+              Gallery
+            </Link>
             <Link className={styles.expoloreMoreLink}>Wedding</Link>
             <Link className={styles.expoloreMoreLink}>Mice Corporate</Link>
+            <Link to={"/moodboard"} className={styles.expoloreMoreLink}>
+              Moodboard
+            </Link>
           </div>
 
           <div className={styles.instagramContainerFooter}>

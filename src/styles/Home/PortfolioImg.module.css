@@ -68,7 +68,7 @@ header {
 .imgBox:hover img {
   opacity: 1;
   transition: 0.3s;
-  box-shadow: 2px 2px 14px 1px rgba(0, 0, 0, 0.377);
+  /* box-shadow: 2px 2px 14px 1px rgba(0, 0, 0, 0.377); */
   /* scale: 1.03; */
   border-radius: 20px;
 }

@@ -53,29 +53,33 @@ function AboutUsPage() {
         <div className={styles.aboutusLandingContainer}>
           <h3>When did our journey begin?....</h3>
           <p>
-            With about 13 years of experience in the events industry, our
-            founder Seby Noronha decided to start his own venture Exotic Goa in
-            the year February 2018. Our mission is to bring people together
-            through memorable events. Insight, empathy and a service-minded
-            ethos lie at the core of the business.
+           With 13 years of
+            experience in the events industry, our founder, Seby Noronha,
+            embarked on his own venture, Exotic Goa, in February 2018. Our
+            mission is to create meaningful experiences that bring people
+            together through unforgettable events. With insight, empathy, and a
+            service-first mindset at the core of our business, we ensure every
+            event is crafted to perfection. From elegant weddings to grand
+            corporate gatherings, we take pride in curating celebrations that
+            leave a lasting impression.
           </p>
         </div>
 
-        <div className={styles.aboutUsLandingHeadingTwo}>
+        {/* <div className={styles.aboutUsLandingHeadingTwo}>
           <span className={styles.line}></span>
           <h3>We Curate Special Moments Into Memories</h3>
           <span className={styles.line}></span>
-        </div>
+        </div> */}
       </div>
       <div className={styles.founderContainer}>
         <div className={styles.founderSubContainer}>
-          <img
+          {/* <img
             className={styles.blob}
             src="/dividers/corporate-divider.svg"
             alt="divider"
-          />
+          /> */}
           <div className={styles.founderImgDiv}>
-            <img src="/Pictures/founderImg.png" alt="exotic-goa-founder" />
+            <img src="/Pictures/founder.png" alt="exotic-goa-founder" />
           </div>
           <div className={styles.founderDescriptionContainer}>
             <h3>About Our Founder</h3>
@@ -99,11 +103,11 @@ function AboutUsPage() {
       </div>
 
       <div className={styles.instagramSection}>
-        <img
+        {/* <img
           src="/dividers/portfolio-divider.svg"
           className={styles.blobTwo}
           alt=""
-        />
+        /> */}
         <div className={styles.instagramSubSection}>
           <div className={styles.headingContainer}>
             <header>Instagram</header>

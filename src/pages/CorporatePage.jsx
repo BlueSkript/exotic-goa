@@ -94,11 +94,11 @@ function CorporatePage() {
           <img src="/Pictures/shal0071.jpg"></img>
         </div>
 
-        <img
+        {/* <img
           src="/dividers/footer-divider.svg"
           alt="divider"
           className={styles.footerDivider}
-        />
+        /> */}
       </div>
     </>
   );

@@ -10,9 +10,9 @@
 
 .titleContainer h2 {
   color: var(--primary-color);
-  font-family: "Slight", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
   font-size: 4rem;
-  font-weight: 400;
 }
 
 .subtitleContainer {

@@ -17,6 +17,7 @@ import WhatsApp from "./components/whatsApp";
 import BlogsDisplay from "./components/BlogsDisplay";
 import { BlogsProvider } from "./context/BlogsContext";
 import Gallery from "./pages/Gallery";
+import MoodBoard from "./components/MoodBoard";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 500 });
@@ -37,6 +38,7 @@ function App() {
           <Route path="/our-services" element={<OurServicesPage />}></Route>
           <Route path="/blogs" element={<BlogsPage />}></Route>
           <Route path="/contact-us" element={<ContactUsPage />}></Route>
+          <Route path="/moodboard" element={<MoodBoard />}></Route>
           <Route
             path="/blogs/destination-weddings-Goa"
             element={<BlogsDisplay blogsKey={'BlogOne'} />}></Route>

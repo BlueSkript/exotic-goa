@@ -62,26 +62,17 @@
 
 .reelHeadijng {
   width: 90%;
-  background-color: var(--primary-color);
-  color: white;
-  font-family: "Times New Roman", Times, serif;
+
+  color: var(--primary-color);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
   margin-bottom: 1rem;
-  font-style: italic;
+  font-size: ;
   /* transform: translateY(50px); */
   z-index: 1;
   transition: 0.5s;
-  opacity: 1;
-  scale: 1;
+  font-size: 1.8rem;
   text-align: center;
-  clip-path: polygon(
-    15px 0%,
-    calc(100% - 15px) 0%,
-    100% 50%,
-    calc(100% - 15px) 100%,
-    15px 100%,
-    0% 50%
-  );
-  padding: 4px 0;
 }
 
 /* .reelContainer:hover .reelHeadijng{
@@ -299,10 +290,10 @@
 }
 
 .testimonialsContainer h3 {
-  font-family: "Slight", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: var(--primary-color);
   font-size: 3rem;
-  font-weight: 550;
+  font-weight: 350;
 }
 
 .testimonialsSubContainer {
@@ -354,4 +345,156 @@
   padding: 0;
   position: absolute;
   bottom: 0;
+}
+
+.howWeDoItContainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  background-color: rgb(239, 234, 218);
+  padding: 3rem 0;
+  margin: 5rem 0;
+}
+
+.howWeDoItContainer h5 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.howWeDoItSubContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.howWeDoItSubContainer img {
+  width: 70%;
+}
+
+.howWeDoItItemContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.howWeDoItItemContainer header {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.howWeDoItContainer p {
+  width: 80%;
+  text-align: center;
+  color: var(--text-color);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.getInTouchContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.getInTouchContainer h6 {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.getInTouchContainer a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.whatsappicon {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.getInTouchContainer a:hover {
+  background-color: var(--primary-color);
+  transition: 0.5s;
+  scale: 0.91;
+}
+
+.getInTouchContainer a:hover h6 {
+  color: white;
+  transition: 0.5s;
+}
+.getInTouchContainer a:hover .whatsappicon {
+  color: white;
+  transition: 0.5s;
+}
+
+.venuesWeHaveWorkedWith {
+  width: 100%;
+}
+
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.carouseltrack {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.carouselitem {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.carouselitem img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.venuesWeHaveWorkedWith {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 10rem 0;
+}
+
+.venuesWeHaveWorkedWith h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--primary-color);
 }

@@ -1,86 +1,88 @@
 .carouselContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 90%;
-  height: 750px;
-  overflow: hidden;
-  transition: 0.5s;
+  width: 100%;
+
 }
 
 .carouselSlide {
   position: absolute;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   opacity: 0;
-  transition: 0.5s;
 }
 
 .carouselSlide img {
-  width: 100%;
+  width: 350px;
+  height: 200px;
   object-fit: cover;
-  height: 250px;
-  transition: transform 1s ease-in-out;
-  border-radius: 10px;
-
-  animation: fadeEffect 0.8s ease-in-out;
+border-radius: 5px;
 }
 
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .center {
+  transform: translateY(0) scale(1.3);
   opacity: 1;
+  z-index: 5;
+}
+
+
+.above {
+  transform: translateY(-100%) scale(1.1);
+  opacity: 0.9;
+  z-index: 4;
+}
+
+/* Below Center - Slightly Smaller */
+.below {
+  transform: translateY(100%) scale(1.1);
+  opacity: 0.9;
+  z-index: 4;
+}
+
+/* Topmost (Smallest) */
+.topmost {
+  transform: translateY(-200%) scale(0.9);
+  opacity: 0.7;
   z-index: 3;
 }
 
-.top {
-  transform: translateY(-100%) scale(0.95);
-  opacity: 1;
-  z-index: 2;
+/* Bottommost (Smallest) */
+.bottommost {
+  transform: translateY(200%) scale(0.9);
+  opacity: 0.7;
+  z-index: 3;
 }
 
-.bottom {
-  transform: translateY(100%) scale(0.95);
-  opacity: 1;
-  z-index: 2;
-}
-
-.hidden {
-  opacity: 0;
-  z-index: 1;
-  transform: translateY(200%);
-}
-
+/* Responsive for Smaller Screens */
 @media screen and (max-width: 600px) {
   .carouselContainer {
-    height: 550px;
+    height: 600px;
   }
 
   .carouselSlide img {
-    height: 150px;
+    width: 350px;
+    height: 180px;
   }
 
-  .top {
-    transform: translateY(-110%) scale(0.9);
-    opacity: 0.8;
-    z-index: 2;
+  .above {
+    transform: translateY(-120%) scale(1.0);
   }
 
-  .bottom {
-    transform: translateY(110%) scale(0.9);
-    opacity: 0.8;
-    z-index: 2;
+  .below {
+    transform: translateY(120%) scale(1.0);
+  }
+
+  .topmost {
+    transform: translateY(-240%) scale(0.85);
+  }
+
+  .bottommost {
+    transform: translateY(240%) scale(0.85);
   }
 }

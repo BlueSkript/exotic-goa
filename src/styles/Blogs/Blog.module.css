@@ -28,18 +28,20 @@
 }
 
 .blogsContainer header {
-  font-family: "Slight", sans-serif;
-  font-weight: 550;
-  font-size: 2.1rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  text-align: center;
 }
 .blogsCard {
   width: 25%;
-  background-color: var(--primary-color);
 
+  font-family: "Josefin Sans", sans-serif;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   transition: 0.5s;
   overflow: hidden;
@@ -48,43 +50,35 @@
   justify-content: flex-start;
 }
 
-.blogsCard:hover {
-  background-color: #cca35c;
-
-  transition: 0.5s;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.288);
-}
-
 .blogsCard h5 {
-  color: white;
-  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
-  text-align: center;
-  font-weight: 500;
- 
+
+  font-weight: 350;
 }
 
 .blogsCard button {
   width: 60%;
   border: none;
-  margin: 0 auto;
   padding: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
-  border-radius: 100px;
-  font-weight: 600;
+  border-radius: 14px;
+  font-weight: 350;
   color: var(--primary-color);
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.301);
+  background-color: transparent;
   transition: 0.5s;
- 
+  border: 1px solid var(--primary-color);
   margin-top: auto;
 }
 
 .blogsCard button:hover {
   cursor: pointer;
-  color: black;
+  color: white;
   transition: 0.5s;
-  scale: 0.9;
+  scale: 1.1;
+  background-color: var(--primary-color);
 }
 
 .blogsImgContainer {
@@ -94,9 +88,8 @@
 
 .blogsCard img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 9/12;
   object-fit: cover;
-  border-radius: 20px;
   transition: 0.5s;
 }
 
@@ -114,12 +107,6 @@
   flex-direction: column;
 
   transform: translate(25%, 25%);
-}
-
-.blogsCard:hover img {
-  /* transform: rotate(2deg); */
-  transition: 0.3s;
-  scale: 1.07;
 }
 
 .blogsDateContainer header {

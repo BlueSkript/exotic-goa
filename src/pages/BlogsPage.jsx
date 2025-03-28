@@ -28,10 +28,10 @@ function BlogsPage() {
               <div key={`${index} + blog`} className={styles.blogsCard}>
                 <div className={styles.blogsImgContainer}>
                   <img src={blog.thumbnail} alt="blogs-thumbnail" />
-                  <div className={styles.blogsDateContainer}>
+                  {/* <div className={styles.blogsDateContainer}>
                     <header>{blog.date}</header>
                     <span>{blog.month}</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <h5> {blog.heading}</h5>
@@ -47,13 +47,13 @@ function BlogsPage() {
         </div>
       </div>
 
-      <div className={styles.footerDiv}>
+      {/* <div className={styles.footerDiv}>
         <img
           src="/dividers/footer-divider.svg"
           alt="divider"
           className={styles.footerDivider}
         />
-      </div>
+      </div> */}
     </>
   );
 }
