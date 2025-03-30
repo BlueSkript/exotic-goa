@@ -459,22 +459,24 @@
 .carouseltrack {
   display: flex;
   animation: scroll 30s linear infinite;
+  gap: 2rem;
 }
 
 .carouselitem {
   flex: 0 0 auto;
   width: 200px;
   margin-right: 20px;
+  
 }
 
 .carouselitem img {
   width: 100%;
   height: 100px;
   object-fit: cover;
-  border-radius: 10px;
+
 }
 
-/* Infinite scrolling animation */
+
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -497,4 +499,5 @@
   font-weight: 300;
   font-family: "Josefin Sans", sans-serif;
   color: var(--primary-color);
+  margin-bottom: 3rem;
 }

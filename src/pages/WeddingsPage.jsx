@@ -15,6 +15,17 @@ import howWeDoItOne from "/public/Pictures/howwedoitone.gif";
 import howWeDoItTwo from "/public/Pictures/howwedoittwo.gif";
 import howWeDoItThree from "/public/Pictures/howwedoitthree.gif";
 
+import venue1 from "/public/Venues/336372292_228980549799461_4346020607358689484_n.jpg";
+import venue2 from "/public/Venues/GOIAL-L001c-ctr-TM-granite-RGB.400x212-PSR.webp";
+import venue3 from "/public/Venues/Grand-Hyatt-Goa-logo-03.png";
+import venue4 from "/public/Venues/itc.png";
+import venue5 from "/public/Venues/Marriott-300x230.png";
+import venue6 from "/public/Venues/radisson.png";
+import venue7 from "/public/Venues/stregis.png";
+import venue8 from "/public/Venues/the_kenilworth_beach_resort__spa_goa_india_logo.jpeg";
+
+const venues = [venue1, venue2, venue3, venue4, venue5, venue6, venue7, venue8];
+
 const images = [
   { src: img10, text: "Exotic Goa" },
   { src: img11, text: "Exotic Goa Hospitality" },
@@ -35,13 +46,14 @@ const images = [
   { src: img19, text: "Exotic Goa Furniture" },
   { src: img20, text: "Exotic Goa Events" },
 ];
+
 const speed = 30;
 function WeddingsPage() {
   const [duplicatedItems, setDuplicatedItems] = useState([]);
 
   useEffect(() => {
-    setDuplicatedItems([...images, ...images]);
-  }, [images]);
+    setDuplicatedItems([...venues, ...venues]);
+  }, [venues]);
 
   return (
     <>
@@ -264,7 +276,7 @@ function WeddingsPage() {
             style={{ animationDuration: `${speed}s` }}>
             {duplicatedItems.map((item, index) => (
               <div className={styles.carouselitem} key={index}>
-                <img src={item.src} alt={`Item ${index}`} />
+                <img src={item} alt={`Item ${index}`} />
               </div>
             ))}
           </div>
