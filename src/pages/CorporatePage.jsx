@@ -2,11 +2,17 @@ import React from "react";
 import styles from "../styles/Corporate/CorporatePage.module.css";
 import CorporateCarousel from "../components/Corporate/CorporateCarousel";
 import HeadingTItle from "../components/Home/HeadingTItle";
+import landingVideo from '/public/videos/corporate.mp4'
+import NavBar from "../components/NavBar";
 function CorporatePage() {
   return (
     <>
-      <CorporateCarousel />
+      {/* <CorporateCarousel /> */}
 
+      <div className={styles.landingVideoContainer}>
+        <NavBar />
+        <video src={landingVideo} muted autoplay="true" loop></video>
+      </div>
       <div className={styles.corporateContainer}>
         <div className={styles.titleContainer}>
           <h2>Begin Your Event or Meetings With Us Here</h2>

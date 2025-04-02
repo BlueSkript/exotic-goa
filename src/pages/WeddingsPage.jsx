@@ -23,7 +23,8 @@ import venue5 from "/public/Venues/Marriott-300x230.png";
 import venue6 from "/public/Venues/radisson.png";
 import venue7 from "/public/Venues/stregis.png";
 import venue8 from "/public/Venues/the_kenilworth_beach_resort__spa_goa_india_logo.jpeg";
-
+import landingVideo from "/public/videos/weddings.mp4";
+import NavBar from "../components/NavBar";
 const venues = [venue1, venue2, venue3, venue4, venue5, venue6, venue7, venue8];
 
 const images = [
@@ -57,7 +58,11 @@ function WeddingsPage() {
 
   return (
     <>
-      <WeddingsCarousel />
+      {/* <WeddingsCarousel /> */}
+      <div className={styles.landingVideoContainer}>
+        <NavBar />
+        <video src={landingVideo} muted autoplay="true" loop></video>
+      </div>
 
       <div className={styles.weddingsInGoaContainer}>
         <HeadingTItle

@@ -1,10 +1,16 @@
 import React from "react";
 import styles from "../styles/ContactUs/ContactUs.module.css";
 import ContactUsCarousel from "../components/ContactUs/ContactUsCarousel";
+import NavBar from "../components/NavBar";
+import landingVideo from "/public/videos/contactus.mp4";
 function ContactUsPage() {
   return (
     <>
-      <ContactUsCarousel />
+      {/* <ContactUsCarousel /> */}
+      <div className={styles.landingVideoContainer}>
+        <NavBar />
+        <video src={landingVideo} muted autoplay="true" loop></video>
+      </div>
       <div className={styles.contactUsContainer}>
         <div className={styles.formContainer}>
           <h3>Contact Info</h3>
@@ -47,7 +53,7 @@ function ContactUsPage() {
           </div>
           <div className={styles.inputContiner}>
             <label for="formmessage">Message</label>
-            <textarea required  id="formmessage" name="message"></textarea>
+            <textarea required id="formmessage" name="message"></textarea>
           </div>
           <div className={styles.inputContiner}>
             <button>SEND</button>
@@ -57,16 +63,14 @@ function ContactUsPage() {
 
       <div className={styles.mapContainer}>
         <iframe
-        className={styles.map}
+          className={styles.map}
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.6647345578444!2d73.95367157574985!3d15.286068559926022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb3e4137b48f9%3A0x6baa3a47e854cbbd!2sExotic%20Goa!5e0!3m2!1sen!2sin!4v1738581263864!5m2!1sen!2sin"
-         
-         
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-<div className={styles.divider}></div>
+      <div className={styles.divider}></div>
     </>
   );
 }

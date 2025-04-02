@@ -4,12 +4,9 @@
   overflow: hidden;
 
   margin: 2rem auto;
- 
 }
 
 .imgsContainer {
-
-
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -27,8 +24,9 @@
   margin: 0 auto;
 }
 
-
-.imgsContainer img:hover{
+.imgsContainer img:hover {
   scale: 1.03;
   transition: 0.5s;
 }
+
+
