@@ -389,6 +389,7 @@
   color: var(--primary-color);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .howWeDoItContainer p {
@@ -466,16 +467,13 @@
   flex: 0 0 auto;
   width: 200px;
   margin-right: 20px;
-  
 }
 
 .carouselitem img {
   width: 100%;
   height: 150px;
   object-fit: contain;
-
 }
-
 
 @keyframes scroll {
   from {
