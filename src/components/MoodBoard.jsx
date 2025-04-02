@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "../styles/MoodBoard.module.css";
 import NavBar from "./NavBar";
+import mood1 from '/public/moodboard/moodboard2.jpg'
+
+import mood2 from '/public/moodboard/moodboard4.jpg'
+import mood3 from "/public/moodboard/moodboard5.jpg"
+import mood4 from "/public/moodboard/moodboard3.jpg"
 function MoodBoard() {
   return (
     <>
@@ -19,7 +24,7 @@ function MoodBoard() {
           <div className={styles.moodboardCard}>
             <div className={styles.moodBoardImg}>
               <img
-                src="/public/moodboard/moodboard2.jpg"
+                src={mood1}
                 alt="exotic-moodboard"
               />
             </div>
@@ -36,7 +41,7 @@ function MoodBoard() {
           <div className={styles.moodboardCard}>
             <div className={styles.moodBoardImg}>
               <img
-                src="/public/moodboard/moodboard4.jpg"
+                src={mood2}
                 alt="exotic-moodboard"
               />
             </div>
@@ -52,7 +57,7 @@ function MoodBoard() {
           <div className={styles.moodboardCard}>
             <div className={styles.moodBoardImg}>
               <img
-                src="/public/moodboard/moodboard5.jpg"
+                src={mood3}
                 alt="exotic-moodboard"
               />
             </div>
@@ -68,7 +73,7 @@ function MoodBoard() {
           <div className={styles.moodboardCard}>
             <div className={styles.moodBoardImg}>
               <img
-                src="/public/moodboard/moodboard3.jpg"
+                src={mood4}
                 alt="exotic-moodboard"
               />
             </div>
