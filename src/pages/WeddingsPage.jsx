@@ -10,7 +10,7 @@ import img13 from "/temp/13.jpg";
 import img21 from "/temp/21.webp";
 import img19 from "/temp/19.webp";
 import img20 from "/temp/20.webp";
-
+import { motion } from "framer-motion";
 import howWeDoItOne from "/public/Pictures/howwedoitone.gif";
 import howWeDoItTwo from "/public/Pictures/howwedoittwo.gif";
 import howWeDoItThree from "/public/Pictures/howwedoitthree.gif";
@@ -62,6 +62,41 @@ function WeddingsPage() {
       <div className={styles.landingVideoContainer}>
         <NavBar />
         <video src={landingVideo} muted autoplay="true" loop></video>
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className={styles.carouselContentContainer}>
+        <div className={styles.carouselSubContainer}>
+          <motion.div
+            initial={{ opacity: 0, translateX: -70 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className={styles.contentContainerLeft}>
+            <div className={styles.content}>
+              <h1>Exotic Hospitality</h1>
+              <p>
+                Wedding Management | Decor <br />
+                Mice Global | Luxury Furniture <br />
+                India, Goa
+              </p>
+            </div>
+            <header>We create experiences</header>
+            <p>India, Goa</p>
+            <a className={styles.homeContactUsBtn} href="">
+              Contact Us
+            </a>
+          </motion.div>
+          
+
+          <motion.h5
+            initial={{ opacity: 0, translateX: 70 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}>
+           Where Every Celebration <br /> Becomes a Timeless Experience!
+          </motion.h5>
+        </div>
+      </motion.div>
       </div>
 
       <div className={styles.weddingsInGoaContainer}>
