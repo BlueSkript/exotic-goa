@@ -3,6 +3,16 @@
   height: 70vh;
 }
 
+.landingVideoContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.landingVideoContainer video {
+  width: 100%;
+}
+
 .videoContainer video {
   width: 100%;
   height: 100%;

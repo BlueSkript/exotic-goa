@@ -3,6 +3,7 @@ import styles from "../styles/Blogs/Blog.module.css";
 import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router";
 import { BlogsProvider, useBlogs } from "../context/BlogsContext";
+import landingVideo from '/public/videos/contactus.mp4'
 function BlogsPage() {
   const blogs = useBlogs();
 
@@ -14,9 +15,9 @@ function BlogsPage() {
   const blogIndex = ["BlogOne", "BlogTwo", "BlogThree"];
   return (
     <>
-      <div className={styles.videoContainer}>
+        <div className={styles.landingVideoContainer}>
         <NavBar />
-        <video src="/public/reels/blogsVideo.mp4" autoPlay muted loop></video>
+        <video src={landingVideo} muted autoplay="true" loop></video>
       </div>
 
       <div className={styles.blogsContainer}>
