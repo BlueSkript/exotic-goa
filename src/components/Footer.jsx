@@ -3,7 +3,7 @@ import styles from "../styles/Footer.module.css";
 import { Link } from "react-router";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-
+import logo from '/public/logos/exotic-goa-logo.png'
 import { FaLinkedinIn } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 
@@ -11,7 +11,7 @@ function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <img className={styles.footerLogo} src="/public/logos/exotic-goa-logo.png" alt="" />
+        <img className={styles.footerLogo} src={logo} alt="" />
         <span className={styles.logoDivDesc}>
           Welcome to Exotic Goa Events, a luxurious event company situated in
           the city of Margao.
