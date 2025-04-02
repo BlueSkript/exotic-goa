@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router";
 import { BlogsProvider, useBlogs } from "../context/BlogsContext";
 import landingVideo from '/public/videos/contactus.mp4'
+import { motion } from "framer-motion";
 function BlogsPage() {
   const blogs = useBlogs();
 
@@ -18,6 +19,40 @@ function BlogsPage() {
         <div className={styles.landingVideoContainer}>
         <NavBar />
         <video src={landingVideo} muted autoplay="true" loop></video>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className={styles.carouselContentContainer}>
+          <div className={styles.carouselSubContainer}>
+            <motion.div
+              initial={{ opacity: 0, translateX: -70 }}
+              animate={{ opacity: 1, translateX: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className={styles.contentContainerLeft}>
+              <div className={styles.content}>
+                <h1>The Planning We Do</h1>
+                <p>
+                  Wedding Management | Decor <br />
+                  Mice Global | Luxury Furniture <br />
+                  India, Goa
+                </p>
+              </div>
+              <header>We create experiences</header>
+              <p>India, Goa</p>
+              <a className={styles.homeContactUsBtn} href="">
+                Contact Us
+              </a>
+            </motion.div>
+
+            <motion.h5
+              initial={{ opacity: 0, translateX: 70 }}
+              animate={{ opacity: 1, translateX: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}>
+              Where Every Celebration <br /> Becomes a Timeless Experience!
+            </motion.h5>
+          </div>
+        </motion.div>
       </div>
 
       <div className={styles.blogsContainer}>
