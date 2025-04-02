@@ -39,18 +39,18 @@ function Footer() {
             <Link className={styles.quickLinks} to={"/"}>
               Home
             </Link>
-            <Link className={styles.quickLinks} to={"/about-us"}>
+            {/* <Link className={styles.quickLinks} to={"/about-us"}>
               About Us
-            </Link>
+            </Link> */}
             <Link className={styles.quickLinks} to={"/weddings"}>
               Weddings
             </Link>
             <Link className={styles.quickLinks} to={"/corporate"}>
               Corporate
             </Link>
-            <Link className={styles.quickLinks} to={"/wedding-hospitality"}>
+            {/* <Link className={styles.quickLinks} to={"/wedding-hospitality"}>
               Wedding Hospitality
-            </Link>
+            </Link> */}
             <Link className={styles.quickLinks} to={"/our-services"}>
               Our Services
             </Link>

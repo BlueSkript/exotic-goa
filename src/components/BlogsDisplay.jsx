@@ -39,9 +39,7 @@ function BlogsDisplay({ blogsKey }) {
   };
   return (
     <div className={styles.blogMainContainer}>
-      <div className={styles.navDiv}>
-        <NavBar />
-      </div>
+      <NavBar />
 
       <Slider {...settings} className={styles.slider}>
         {blog.images.map((img, index) => (
