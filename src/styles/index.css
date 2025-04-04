@@ -37,10 +37,9 @@ body {
 
 @media screen and (max-width: 900px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
-
 @font-face {
   font-family: "Slight";
   src: url("../assets/fonts/slight-regular.ttf") format("truetype");

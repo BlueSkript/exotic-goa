@@ -12,7 +12,7 @@
   background-color: #f8f0e2;
 }
 
-.footerLogo{
+.footerLogo {
   width: 300px;
 }
 
@@ -55,7 +55,6 @@
   font-family: "Poppins", sans-serif;
   text-align: left;
   color: rgb(153, 112, 56);
-  
 }
 
 .socialsIconsContainer span {
@@ -73,7 +72,6 @@
 }
 
 .socialsIconsContainer span:hover {
-  
   background-color: rgb(153, 112, 56);
   color: white;
   transition: 0.3s;
@@ -114,7 +112,6 @@
 .quickLinks:hover {
   transition: 0.5s;
   color: rgb(190, 146, 84);
-
 }
 
 .exploreMoreContiner {
@@ -129,13 +126,12 @@
 .expoloreMoreLink {
   text-decoration: none;
   color: rgb(153, 112, 56);
- transition: 0.5s;
+  transition: 0.5s;
   font-family: "Poppins", sans-serif;
 }
 
 .expoloreMoreLink:hover {
   color: rgb(190, 146, 84);
-
 }
 
 .instagramContainerFooter {
@@ -233,7 +229,7 @@
 
 .footerContainerTwo {
   width: 70%;
-  border-top: 2px solid  rgb(153, 112, 56);
+  border-top: 2px solid rgb(153, 112, 56);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -241,7 +237,7 @@
 }
 
 .copyrightsContainer span {
-  color:  rgb(153, 112, 56);
+  color: rgb(153, 112, 56);
   font-family: "Poppins", sans-serif;
 }
 
@@ -251,6 +247,103 @@
 }
 
 .policiesContainer span {
-  color:  rgb(153, 112, 56);
+  color: rgb(153, 112, 56);
   font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  .footserContainerOne {
+    width: 90%;
+  }
+
+  .logoDivDesc {
+    width: 80%;
+    text-align: center;
+  }
+
+  .instaImgSubContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .instaImgsContainer {
+    row-gap: 0px;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footerContainerTwo {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footserContainerOne {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  .quickLinksContainer {
+    align-items: center;
+    width: 50%;
+  }
+
+  .exploreMoreContiner {
+    align-items: center;
+    width: 50%;
+  }
+
+  .instagramContainerFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instaImgSubContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  .instaImgsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footserContainerOne {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .quickLinksContainer {
+    width: 80%;
+    align-items: flex-start;
+  }
+
+  .exploreMoreContiner {
+    width: 80%;
+    align-items: flex-start;
+  }
+
+  .instagramContainerFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instaImgSubContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  .instaImgsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

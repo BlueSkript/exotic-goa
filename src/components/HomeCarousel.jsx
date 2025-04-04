@@ -69,24 +69,7 @@ function HomeCarousel() {
               Contact Us
             </a>
           </motion.div>
-          {/* <motion.div
-            initial={{ opacity: 0, translateX: -70 }}
-            animate={{ opacity: 1, translateX: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className={styles.contentContainerLeft}>
-            <div className={styles.content}>
-              <ImQuotesLeft className={styles.quoteIcon} />
-              <p>
-                Exotic Goa made our dreams come true! We did not imagine our
-                wedding to be so close to a fairytale that we wanted it to be.
-                They took care of each and every detail and suggested us where
-                needed. We definitely made the right choice in choosing Exotic
-                Goa. Thank you Shruti and team for giving us the best day ever!”
-              </p>
-              <ImQuotesRight className={styles.quoteIcon} />
-            </div>
-            <header>Tripti & Divyanshu</header>
-          </motion.div> */}
+          
 
           <motion.h5
             initial={{ opacity: 0, translateX: 70 }}

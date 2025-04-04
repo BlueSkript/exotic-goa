@@ -13,6 +13,7 @@
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 4rem;
+  text-align: center;
 }
 
 .subtitleContainer {
@@ -24,6 +25,7 @@
 .subtitleContainer span {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  text-align: center;
 }
 
 .subtitleBar {

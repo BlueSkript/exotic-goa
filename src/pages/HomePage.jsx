@@ -16,6 +16,12 @@ function HomePage() {
     margin: "-100px",
   });
 
+  const weddingCarousel = useRef(null);
+  const isWeddingsCarouselInView = useInView(weddingCarousel, {
+    triggerOnce: true,
+    margin: "-100px",
+  });
+
   const aboutusRef = useRef(null);
   const isAboutUsInView = useInView(aboutusRef, {
     triggerOnce: true,
@@ -44,6 +50,7 @@ function HomePage() {
     triggerOnce: true,
     margin: "-100px",
   });
+
   const instagramPosts = [
     {
       link: "https://www.instagram.com/p/C94s9_nJpml/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -158,18 +165,18 @@ function HomePage() {
         </div>
       </motion.div>
 
-      <div className={styles.weddingsSection}>
+      <motion.div
+        ref={weddingsRef}
+        initial={{ opacity: 0, translateY: 50 }}
+        animate={isWeddingsInView ? { opacity: 1, translateY: 0 } : {}}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className={styles.weddingsSection}>
         <HeadingTItle
           key={"wedding"}
           title={"Weddings"}
           subtitle={"Our Best Memories"}
         />
-        <motion.div
-          ref={weddingsRef}
-          initial={{ opacity: 0, translateY: 50 }}
-          animate={isWeddingsInView ? { opacity: 1, translateY: 0 } : {}}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className={styles.weddingDescriptionHome}>
+        <div className={styles.weddingDescriptionHome}>
           <p>
             Envision the wedding of your dreams against the backdrop of the
             white sandy beaches of Goa?. This is what we can do for you! Our
@@ -181,11 +188,16 @@ function HomePage() {
             unforgettable moments with their family and friends is a priviledge
             we truly embrace.
           </p>
-        </motion.div>
+        </div>
         <WeddingHomeCarousel />
-      </div>
+      </motion.div>
 
-      <div className={styles.corporateContainer}>
+      <motion.div
+        ref={corporateRef}
+        initial={{ opacity: 0, translateY: 50 }}
+        animate={isCorporateInView ? { opacity: 1, translateY: 0 } : {}}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className={styles.corporateContainer}>
         <img
           src="/dividers/corporate-divider.svg"
           alt="page-divider"
@@ -196,12 +208,7 @@ function HomePage() {
           title={"Corporate"}
           subtitle={"Our Best Memories"}
         />
-        <motion.div
-          ref={corporateRef}
-          initial={{ opacity: 0, translateY: 50 }}
-          animate={isCorporateInView ? { opacity: 1, translateY: 0 } : {}}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className={styles.corporateDescContainer}>
+        <div className={styles.corporateDescContainer}>
           <p>
             Elevate leadership with strategic corporate events, fostering
             colloboration and culture. Employees feel appreciated and build
@@ -213,66 +220,38 @@ function HomePage() {
             morale, strengthen team dynamics, facilitate networking, or launch a
             new product or service.
           </p>
-        </motion.div>
+        </div>
         <CorporateCarousel />
-      </div>
+      </motion.div>
 
-      <div className={styles.portfolioContainer}>
+      <motion.div
+        ref={portfolioRef}
+        initial={{ opacity: 0, translateY: 50 }}
+        animate={isPortfolioInView ? { opacity: 1, translateY: 0 } : {}}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className={styles.portfolioContainer}>
         <img
           src="/dividers/portfolio-divider.svg"
           alt="page-divider"
           className={styles.blob}
         />
         <HeadingTItle title={"Portfolio"} subtitle={"Our Best Memories"} />
-        {/* <PortfolioImg /> */}
 
         <PortfolioGallery />
-      </div>
+      </motion.div>
 
-      <div className={styles.ourFeaturedContainer}>
+      <div
+       ref={milestonesRef}
+       initial={{ opacity: 0, translateY: 50 }}
+       animate={isMilestonesInView ? { opacity: 1, translateY: 0 } : {}}
+       transition={{ duration: 1, ease: "easeInOut" }}
+      className={styles.ourFeaturedContainer}>
         <img
           src="/dividers/corporate-divider.svg"
           alt="page-divider"
           className={styles.blob}
         />
         <HeadingTItle title={"Milestones"} subtitle={"What Makes Us Shine"} />
-
-        {/* <div className={styles.reelsContainer}>
-         <img
-            src="/dividers/border.svg"
-            alt="border"
-            className={styles.reelBorderOne}
-          />
-          <img
-            src="/dividers/border.svg"
-            alt="border"
-            className={styles.reelBorderTwo}
-          /> 
-          <video
-            src={"/reels/reel1.mp4"}
-            className={styles.reel}
-            autoPlay
-            loop
-            muted></video>
-          <video
-            src={"/reels/reel1.mp4"}
-            className={styles.reel}
-            autoPlay
-            loop
-            muted></video>
-          <video
-            src={"/reels/reel1.mp4"}
-            className={styles.reel}
-            autoPlay
-            loop
-            muted></video>
-          <video
-            src={"/reels/reel1.mp4"}
-            className={styles.reel}
-            autoPlay
-            loop
-            muted></video>
-        </div> */}
 
         <MilestonesCarousel />
       </div>

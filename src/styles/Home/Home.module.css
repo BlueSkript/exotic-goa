@@ -168,12 +168,14 @@
 }
 
 .instagramImgConainer {
-  width: 50%;
-  display: flex;
+  width: 60%;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 
   cursor: pointer;
@@ -199,7 +201,8 @@
 }
 
 .instagramImgDiv {
-  width: 30%;
+  /* width: 30%; */
+  
   height: 350px;
   transition: 0.5s;
   background-color: var(--primary-color);
@@ -376,7 +379,7 @@
 }
 
 .founderSubContainer {
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: row;
@@ -411,7 +414,7 @@
 }
 
 .founderDescriptionContainer {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -439,56 +442,74 @@
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
 }
-/* 
-.instagramSection {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8rem 0;
-  position: relative;
-}
 
-.instagramSubSection {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
+@media screen and (max-width: 1000px) {
+  .aboutUsLanding {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6rem;
 
-.headingContainer {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
+    padding: 2rem;
+  }
 
-.headingContainer header {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 350;
+  .aboutusLandingContainer {
+    width: 100%;
+  }
 
-  font-size: 3rem;
-  color: var(--primary-color);
-}
+  .founderSubContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
 
-.subHeading {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+  .founderDescriptionContainer {
+    width: 90%;
+    align-items: center;
+  }
 
-.line {
-  width: 50px;
-  height: 2px;
-  background-color: var(--primary-color);
-  display: block;
+  .founderDescriptionContainer header {
+    text-align: center;
+  }
+
+  .founderImgDiv {
+    width: 50%;
+  }
+
+  .founderImgDiv::after {
+    right: -10px;
+    bottom: -10px;
+  }
+
+  .founderSubContainer p{
+    text-align: justify;
+   
+    width: 100%;
+  }
+
+  .weddingDescriptionHome p{
+    
+    width: 90%;
+    text-align: justify;
+  }
+
+  .corporateContainer {
+    padding: 2rem 0;
+  }
+
+  .corporateDescContainer p{
+    width: 90%;
+    text-align: justify;
+
+  }
+
+  .instagramImgConainer{
+    width: 90%;
+    
+  }
+  .instagramImgDiv{
+    height: 150px;
+
+  }
 }
- */
