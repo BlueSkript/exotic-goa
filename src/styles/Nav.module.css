@@ -89,8 +89,6 @@ nav {
   scale: 1.2;
 }
 
-
-
 /* .link:nth-child(7) {
   background-color: var(--primary-color);
   padding: 10px;
@@ -163,7 +161,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.646);
-   
+
     border: none;
     height: 30px;
   }
@@ -179,7 +177,8 @@ nav {
     width: 100px;
     margin: 0 auto;
     z-index: 15;
-    scale: 0;
+    opacity: 0;
+    transition: 0.5s;
   }
 
   .navlinksContainer {
@@ -191,7 +190,7 @@ nav {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.646);
-    
+
     padding: 1rem 0;
     gap: 1rem;
     align-items: center;
@@ -199,25 +198,24 @@ nav {
     transition: 0.5s ease;
     border: none;
     z-index: 4;
-    
   }
 
   .navlinksContainer.showMenu {
     height: 400px;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.646);
-  
   }
 
   .navlinksContainer.showMenu .logo {
-    scale: 1;
+    opacity: 1;
+    transition: 0.5s;
   }
 
   .link {
-    width: 100%;
+    width: auto;
     text-align: center;
     padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
     font-size: 1.2rem;
   }
 }
