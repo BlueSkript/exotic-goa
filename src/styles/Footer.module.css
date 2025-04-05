@@ -313,6 +313,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .footer {
+   
+    background: url(/public/footerbackground.png);
+    background-size: 500%;
+    background-color: #f8f0e2;
+    background-clip: ;
+  }
 }
 
 @media screen and (max-width: 400px) {
