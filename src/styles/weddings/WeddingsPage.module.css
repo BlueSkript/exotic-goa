@@ -634,9 +634,6 @@
     width: 40%;
   }
 
-  .howWeDoItSubContainer {
-    grid-template-columns: 1fr;
-  }
 
   .carouselitem img {
     width: 100%;
@@ -732,5 +729,10 @@
 
   .carouselContentContainer h5 {
     text-align: center;
+  }
+
+  
+  .howWeDoItSubContainer {
+    grid-template-columns: 1fr;
   }
 }
