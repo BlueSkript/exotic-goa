@@ -59,10 +59,38 @@ border-radius: 5px;
   z-index: 3;
 }
 
-/* Responsive for Smaller Screens */
+
 @media screen and (max-width: 600px) {
   .carouselContainer {
     height: 600px;
+  }
+
+  .carouselSlide img {
+    width: 350px;
+    height: 180px;
+  }
+
+  .above {
+    transform: translateY(-120%) scale(1.0);
+  }
+
+  .below {
+    transform: translateY(120%) scale(1.0);
+  }
+
+  .topmost {
+    transform: translateY(-240%) scale(0.85);
+  }
+
+  .bottommost {
+    transform: translateY(240%) scale(0.85);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .carouselContainer {
+    height: 300px;
+    overflow: hidden;
   }
 
   .carouselSlide img {

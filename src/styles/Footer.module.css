@@ -315,11 +315,9 @@
   }
 
   .footer {
-   
     background: url(/public/footerbackground.png);
-    background-size: 500%;
+    background-size: 0%;
     background-color: #f8f0e2;
-    background-clip: ;
   }
 }
 
