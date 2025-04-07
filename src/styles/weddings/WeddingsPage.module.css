@@ -621,6 +621,7 @@
     padding-bottom: 1rem;
   }
 }
+
 @media screen and (max-width: 1100px) {
   .weddingsInGoaContainer p {
     width: 90%;

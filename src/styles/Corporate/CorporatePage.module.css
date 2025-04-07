@@ -8,7 +8,6 @@
   gap: 1rem;
 }
 
-
 .landingVideoContainer {
   width: 100%;
   height: 100vh;
@@ -18,6 +17,9 @@
 
 .landingVideoContainer video {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .titleContainer h2 {
@@ -26,6 +28,7 @@
   font-size: 2.5em;
   font-weight: 350;
   font-style: italic;
+  text-align: center;
 }
 
 .subtitleContainer {
@@ -37,6 +40,7 @@
 .subtitleContainer span {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  text-align: center;
 }
 
 .subtitleBar {
@@ -45,27 +49,24 @@
   background-color: var(--primary-color);
 }
 
-
-.corporateContainer{
-
+.corporateContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:3rem;
+  gap: 3rem;
   position: relative;
   padding: 4rem 0;
 }
 
-.corporateContainer span{
+.corporateContainer span {
   width: 50%;
   text-align: center;
   font-size: 1.1rem;
   color: var(--text-color);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
-
 
 .weddingsReelsContainer {
   width: 80%;
@@ -86,7 +87,7 @@
 
 .reelHeadijng {
   width: 100%;
- 
+
   color: var(--primary-color);
   font-family: "Josefin Sans", sans-serif;
   margin-bottom: 1rem;
@@ -116,8 +117,7 @@
   z-index: 2;
 }
 
-
-.navyContainer{
+.navyContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -133,7 +133,7 @@
   width: 50%;
 }
 
-.navyReelContainer img{
+.navyReelContainer img {
   width: 100%;
   height: 400px;
   aspect-ratio: 19/6;
@@ -156,9 +156,6 @@
   bottom: 0;
 }
 
-
-
-
 .carouselContentContainer {
   width: 100%;
   position: absolute;
@@ -173,9 +170,13 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content:center;
+  justify-content: center;
   padding-bottom: 2rem;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.554));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.554)
+  );
 }
 
 .carouselSubContainer {
@@ -254,4 +255,101 @@
   font-size: 1rem;
   transition: 0.5s;
   scale: 0.9;
+}
+
+@media screen and (max-width: 700px) {
+  .carouselContentContainer {
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+
+  .contentContainerLeft {
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .contentContainerLeft header {
+    text-align: center;
+    width: 100%;
+  }
+
+  .carouselSubContainer {
+    padding: 0;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .content {
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content h1 {
+    text-align: center;
+  }
+
+  .content p {
+    text-align: center !important;
+  }
+
+  .homeContactUsBtn {
+    margin: 1rem 0 4rem 0;
+    scale: 1.5;
+  }
+
+  .homeContactUsBtn:hover {
+    scale: 1.2;
+  }
+
+  .carouselContentContainer h5 {
+    text-align: center;
+  }
+
+  .howWeDoItSubContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .reelContainer{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .carouselContentContainer{
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+  .corporateContainer span {
+    width: 90%;
+    text-align: justify;
+  }
+
+  .weddingsReelsContainer {
+    flex-direction: column;
+    
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0px;
+  }
+
+  .reelContainer {
+    width: 60%;
+  }
+
+  .subtitleContainer span{
+    text-align: center;
+  }
+
+  .navyReelContainer{
+    
+    width: 60%;
+  }
 }
