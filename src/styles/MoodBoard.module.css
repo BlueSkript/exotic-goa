@@ -158,3 +158,44 @@
   position: absolute;
   bottom: 0;
 }
+
+
+@media screen and (max-width : 1500px){
+  .moodboardSubContainer {
+    width: 100%;
+   
+  }
+
+  .moodColorsContainer div {
+    width: 60px;
+    height: 60px;
+    /* border-radius: 20px; */
+    display: block;
+  }
+
+  .headingContainer span {
+    width: 90%;
+    
+  }
+  
+}
+@media screen and (max-width : 800px){
+  .moodboardSubContainer {
+    width: 100%;
+   
+  }
+
+  .moodColorsContainer div {
+    width: 60px;
+    height: 60px;
+   
+    display: block;
+  }
+  
+  .moodboardCard {
+    width: 100%;
+   
+  }
+
+  
+}
