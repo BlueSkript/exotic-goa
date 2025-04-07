@@ -257,6 +257,13 @@
   scale: 0.9;
 }
 
+@media screen and (max-width: 1500px) {
+  .carouselContentContainer {
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .carouselContentContainer {
     justify-content: center;
