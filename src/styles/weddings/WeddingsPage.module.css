@@ -330,13 +330,14 @@
   color: var(--text-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+ 
 }
 
 .testimonialContent span {
   font-size: 1.1rem;
-  height: 80%;
+ 
   text-align: justify;
 }
 
