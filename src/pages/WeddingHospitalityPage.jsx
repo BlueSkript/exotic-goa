@@ -6,10 +6,10 @@ function WeddingHospitalityPage() {
     <>
       <NavBar />
       <div className={styles.bannerContainer}>
-        <img
-          src="/public/Pictures/home-wedding-picture-exotic-goa-two.jpg"
+        {/* <img
+          src="/home-wedding-picture-exotic-goa-two.jpg"
           alt="exotic-goa-banner"
-        />
+        /> */}
         <h2>Exotic Goa</h2>
         <header>Real Weddings</header>
         <span>Real Couples, Real Inspiration</span>
@@ -18,26 +18,26 @@ function WeddingHospitalityPage() {
       <div className={styles.WeddingHospitalityMainContainer}>
         <div className={`${styles.section} ${styles.sectionOne}`}>
           <h4>Wedding Culture</h4>
-            <img src="/public/temp/21.webp" alt="" />
+          <img src="/temp/21.webp" alt="" />
           <div className={`${styles.galleryContainer} `}>
-            <img src="/public/temp/14.jpg" alt="" />
-            <img src="/public/temp/14.jpg" alt="" />
+            <img src="/temp/14.jpg" alt="" />
+            <img src="/temp/14.jpg" alt="" />
           </div>
         </div>
         <div className={`${styles.section} ${styles.sectionOne}`}>
           <h4>E-Invites</h4>
-            <img src="/public/temp/24.webp" alt="" />
+          <img src="/temp/24.webp" alt="" />
           <div className={`${styles.galleryContainer} `}>
-            <img src="/public/temp/12.jpg" alt="" />
-            <img src="/public/temp/11.jpg" alt="" />
+            <img src="/temp/12.jpg" alt="" />
+            <img src="/temp/11.jpg" alt="" />
           </div>
         </div>
         <div className={`${styles.section} ${styles.sectionOne}`}>
           <h4>Wardrobe Planner</h4>
-            <img src="/public/temp/20.webp" alt="" />
+          <img src="/temp/20.webp" alt="" />
           <div className={`${styles.galleryContainer} `}>
-            <img src="/public/temp/16.jpg" alt="" />
-            <img src="/public/temp/13.jpg" alt="" />
+            <img src="/temp/16.jpg" alt="" />
+            <img src="/temp/13.jpg" alt="" />
           </div>
         </div>
       </div>

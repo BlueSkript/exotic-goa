@@ -5,7 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 
 import { motion } from "framer-motion";
-import logo from "/public/logos/exotic-goa-nav-logo.png";
+import logo from "/logos/exotic-goa-nav-logo.png";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,11 +20,15 @@ function NavBar() {
       transition={{ duration: 1, ease: "easeInOut" }}
       className={styles.nav}>
       <div className={styles.hamburgerMenuContainer} onClick={toggleMenu}>
-        {!menuOpen ? <RxHamburgerMenu className={styles.menuIcon} /> : <IoMdClose className={styles.menuIcon} />}
+        {!menuOpen ? (
+          <RxHamburgerMenu className={styles.menuIcon} />
+        ) : (
+          <IoMdClose className={styles.menuIcon} />
+        )}
       </div>
       <div
         className={`${styles.navlinksContainer} ${
-          menuOpen ? styles.showMenu : ''
+          menuOpen ? styles.showMenu : ""
         }`}>
         <Link className={styles.link} to={"/"} onClick={closeMenu}>
           Home
@@ -36,11 +40,13 @@ function NavBar() {
           Corporate
         </Link>
 
-        <img
-          className={styles.logo}
-          src={logo}
-          alt="exotic-goa-luxury-furniture-logo"
-        />
+        <Link to={"/"}>
+          <img
+            className={styles.logo}
+            src={logo}
+            alt="exotic-goa-luxury-furniture-logo"
+          />
+        </Link>
 
         <Link className={styles.link} to={"/our-services"} onClick={closeMenu}>
           Our Services

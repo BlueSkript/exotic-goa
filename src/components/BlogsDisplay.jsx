@@ -2,8 +2,8 @@ import React from "react";
 import styles from "../styles/Blogs/BlogsDisplay.module.css";
 import NavBar from "./NavBar";
 import Slider from "react-slick";
-import { BlogsProvider, useBlogs } from "../context/BlogsContext";
-import { useImages } from "../context/CarouselContext";
+import {  useBlogs } from "../context/BlogsContext";
+
 
 function BlogsDisplay({ blogsKey }) {
   const blogs = useBlogs();

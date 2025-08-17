@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../styles/Home/HomeCarousel.module.css";
 import NavBar from "./NavBar";
-import { useImages } from "../context/CarouselContext";
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
+import carouselImages from '../../JSONs/Cover Images.json'
 function HomeCarousel() {
-  const images = useImages();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -64,10 +64,11 @@ function HomeCarousel() {
               </p>
             </div>
             <header>We create experiences</header>
-            <p>India, Goa</p>
-            <a className={styles.homeContactUsBtn} href="">
+            <p className={styles.address}>India, Goa</p>
+            <Link className={styles.homeContactUsBtnContainer} to={'/contact-us'}><a className={styles.homeContactUsBtn} href="">
               Contact Us
-            </a>
+            </a></Link>
+            
           </motion.div>
           
 
@@ -75,12 +76,12 @@ function HomeCarousel() {
             initial={{ opacity: 0, translateX: 70 }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}>
-           Where Every Celebration <br /> Becomes a Timeless Experience!
+           Where every celebration <br /> becomes a timeless experience!
           </motion.h5>
         </div>
       </motion.div>
       <Slider {...settings} className={styles.slider}>
-        {images["homepage"].map((img, index) => {
+        {carouselImages.map((img, index) => {
           return (
             <div key={index} className={styles.imgsSlide}>
               <img src={img} alt={img} />

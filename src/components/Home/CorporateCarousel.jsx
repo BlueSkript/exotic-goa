@@ -1,19 +1,23 @@
 import React from "react";
 import Slider from "react-slick";
 import styles from "../../styles/Home/CorporateCarousel.module.css";
-import { useImages } from "../../context/CarouselContext";
+
+import corporateImages from '../../../JSONs/Corporate Section Images.json'
 function CorporateCarousel() {
-  const images = useImages();
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    buttons : false,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: false,
-    draggable: false,
+    draggable: true,
+    // centerMode : true,
+
 
     responsive: [
       {
@@ -37,7 +41,7 @@ function CorporateCarousel() {
   
   return (
     <Slider {...settings} className={styles.slider}>
-      {images["homepageCorporate"].map((img, index) => {
+      {corporateImages.map((img, index) => {
         return (
           <div
             data-aos="fade-right"

@@ -2,15 +2,36 @@ import React from "react";
 import styles from "../styles/ContactUs/ContactUs.module.css";
 import ContactUsCarousel from "../components/ContactUs/ContactUsCarousel";
 import NavBar from "../components/NavBar";
-import landingVideo from "/public/videos/contactus.mp4";
+import poster from "/videoPosters/contactUsLandingPoster.png";
 import { motion } from "framer-motion";
 function ContactUsPage() {
+  function sendToWhatsApp() {
+    const name = document.getElementById("formname").value.trim();
+    const email = document.getElementById("formemail").value.trim();
+    const phone = document.getElementById("formnumber").value.trim();
+    const message = document.getElementById("formmessage").value.trim();
+
+    const finalMessage = `Hello, I would like to plan an event.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+
+    const whatsappNumber = "919822971391";
+
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${finalMessage}`;
+    window.open(whatsappURL, "_blank");
+  }
+
   return (
     <>
       {/* <ContactUsCarousel /> */}
       <div className={styles.landingVideoContainer}>
         <NavBar />
-        <video src={landingVideo} muted autoplay="true" loop></video>
+        <video
+          poster={poster}
+          src={
+            "https://res.cloudinary.com/duh71fcas/video/upload/v1754122921/Exotic%20data/Contact%20Us/GATHERING_REEL_yuisib.mp4"
+          }
+          muted
+          autoPlay
+          loop></video>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -25,23 +46,20 @@ function ContactUsPage() {
               <div className={styles.content}>
                 <h1>Contact Us</h1>
                 <p>
-                  Wedding Management | Decor <br />
-                  Mice Global | Luxury Furniture <br />
-                  India, Goa
+                  Wedding Management | Decor | Decor | MICE Global | Luxury
+                  Furniture Goa, India.
                 </p>
               </div>
               <header>We create experiences</header>
-              <p>India, Goa</p>
-              <a className={styles.homeContactUsBtn} href="">
-                Contact Us
-              </a>
+              <p className={styles.address}>India, Goa</p>
             </motion.div>
 
             <motion.h5
               initial={{ opacity: 0, translateX: 70 }}
               animate={{ opacity: 1, translateX: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}>
-              Where Every Celebration <br /> Becomes a Timeless Experience!
+              We’re just a message away <br />
+              let’s make something unforgettable together.
             </motion.h5>
           </div>
         </motion.div>
@@ -72,22 +90,31 @@ function ContactUsPage() {
           </div>
         </div>
 
-        <form action="" className={styles.form}>
+        <form
+          className={styles.form}
+          onSubmit={(e) => {
+            e.preventDefault();
+            sendToWhatsApp();
+          }}>
           <div className={styles.formHeadingContainer}>
             <header>Your Dream Event Starts Here – Let's Connect!</header>
             <span>Plan Your Perfect Event reach Out to Us Today!</span>
           </div>
 
           <div className={styles.inputContiner}>
-            <label for="formname">Name</label>
+            <label htmlFor="formname">Name</label>
             <input required id="formname" type="text" />
           </div>
           <div className={styles.inputContiner}>
-            <label for="formemail">Email</label>
+            <label htmlFor="formemail">Email</label>
             <input required id="formemail" type="email" />
           </div>
           <div className={styles.inputContiner}>
-            <label for="formmessage">Message</label>
+            <label htmlFor="formnumber">Phone</label>
+            <input required id="formnumber" type="text" />
+          </div>
+          <div className={styles.inputContiner}>
+            <label htmlFor="formmessage">Message</label>
             <textarea required id="formmessage" name="message"></textarea>
           </div>
           <div className={styles.inputContiner}>

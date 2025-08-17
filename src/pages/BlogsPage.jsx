@@ -1,24 +1,53 @@
 import React from "react";
 import styles from "../styles/Blogs/Blog.module.css";
 import NavBar from "../components/NavBar";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { BlogsProvider, useBlogs } from "../context/BlogsContext";
-import landingVideo from '/public/videos/contactus.mp4'
+
 import { motion } from "framer-motion";
+import Slider from "react-slick";
+
 function BlogsPage() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    fade: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  const images = [
+    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067208/Exotic%20Data/Home%20Page/Cover%20Images/3.webp",
+  ];
   const blogs = useBlogs();
 
-  const navigate = useNavigate();
-  const handleReadMoreClick = (key) => {
-    const index = blogIndex[key]
-    navigate(blogs[`${index}`].route);
-  };
-  const blogIndex = ["BlogOne", "BlogTwo", "BlogThree"];
   return (
     <>
-        <div className={styles.landingVideoContainer}>
-        <NavBar />
-        <video src={landingVideo} muted autoplay="true" loop></video>
+      <div className={styles.carouselContainer}>
+        <NavBar></NavBar>
+        <div className={styles.gradientFilter}></div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -31,37 +60,50 @@ function BlogsPage() {
               transition={{ duration: 1, ease: "easeInOut" }}
               className={styles.contentContainerLeft}>
               <div className={styles.content}>
-                <h1>The Planning We Do</h1>
+                <h1>Our Amazing Executions</h1>
                 <p>
-                  Wedding Management | Decor <br />
-                  Mice Global | Luxury Furniture <br />
-                  India, Goa
+                  Featured at Wedding Sutra | Executions at Goa’s top 5 Stars.
                 </p>
               </div>
               <header>We create experiences</header>
-              <p>India, Goa</p>
-              <a className={styles.homeContactUsBtn} href="">
-                Contact Us
-              </a>
+              <p className={styles.address}>India, Goa</p>
+              <Link
+                className={styles.homeContactUsBtnContainer}
+                to={"/contact-us"}>
+                <a className={styles.homeContactUsBtn} href="">
+                  Contact Us
+                </a>
+              </Link>
             </motion.div>
 
             <motion.h5
               initial={{ opacity: 0, translateX: 70 }}
               animate={{ opacity: 1, translateX: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}>
-              Where Every Celebration <br /> Becomes a Timeless Experience!
+              Turning moments into memories,
+              <br /> and dreams into I do's
             </motion.h5>
           </div>
         </motion.div>
+        <Slider {...settings} className={styles.slider}>
+          {images.map((img, index) => {
+            return (
+              <div key={index} className={styles.imgsSlide}>
+                <img src={img} alt={img} />
+              </div>
+            );
+          })}
+        </Slider>
       </div>
-
       <div className={styles.blogsContainer}>
         <header>Latest Blogs</header>
 
         <div className={styles.blogsSubContainer}>
           {Object.entries(blogs).map(([key, blog], index) => (
             <>
-              <div key={`${index} + blog`} className={styles.blogsCard}>
+              <div
+                key={`${index} + blog + ${key}`}
+                className={styles.blogsCard}>
                 <div className={styles.blogsImgContainer}>
                   <img src={blog.thumbnail} alt="blogs-thumbnail" />
                   {/* <div className={styles.blogsDateContainer}>
@@ -71,12 +113,9 @@ function BlogsPage() {
                 </div>
 
                 <h5> {blog.heading}</h5>
-                <button
-                  onClick={() => {
-                    handleReadMoreClick(index);
-                  }}>
+                <a href={blog.route} target="_blank">
                   Read more
-                </button>
+                </a>
               </div>
             </>
           ))}

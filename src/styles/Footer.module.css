@@ -7,7 +7,7 @@
   align-items: center;
   gap: 2rem;
   padding-top: 4rem;
-  background: url(/public/footerbackground.png);
+  background: url(/footerbackground.png);
   background-size: contain;
   background-color: #f8f0e2;
 }
@@ -160,40 +160,40 @@
 }
 
 .instaImgOne {
-  background-image: url("/Pictures/wedding-267.jpg");
+  background-image: url("https://res.cloudinary.com/duh71fcas/image/upload/v1754124943/Exotic%20data/instagram/ztjlgrabrrvq7onmz0n0_ll5kvn.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .instaImgTwo {
-  background-image: url("/Pictures/wedding-516.jpg");
+  background-image: url("https://res.cloudinary.com/duh71fcas/image/upload/v1754124943/Exotic%20data/instagram/yxm1mk4rybzlph1lqout_mhuhjh.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .instaImgThree {
-  background-image: url("/Pictures/wedding-521.jpg");
+  background-image: url("https://res.cloudinary.com/duh71fcas/image/upload/v1754124941/Exotic%20data/instagram/wqsswfja9u3czrqpkvj8_s5iui3.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .instaImgFour {
-  background-image: url("/Pictures/wedding-514.jpg");
+  background-image: url("https://res.cloudinary.com/duh71fcas/image/upload/v1754124941/Exotic%20data/instagram/va1vvzkc2qyayqfdclep_xnpmpe.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .instaImgFive {
-  background-image: url("/Pictures/wedding-260.jpg");
+  background-image: url("https://res.cloudinary.com/duh71fcas/image/upload/v1754124938/Exotic%20data/instagram/p2ysxmkbydorqoc9v5ye_fszcii.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .instaImgSix {
-  background-image: url("/Pictures/wedding-271.jpg");
+  background-image: url("https://res.cloudinary.com/duh71fcas/image/upload/v1754124917/Exotic%20data/instagram/m2thbo1f22kciiyhwjw6_j8vwim.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,7 +315,7 @@
   }
 
   .footer {
-    background: url(/public/footerbackground.png);
+    background: url(/footerbackground.png);
     background-size: 0%;
     background-color: #f8f0e2;
   }

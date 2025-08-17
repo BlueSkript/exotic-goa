@@ -79,7 +79,7 @@ function AboutUsPage() {
             alt="divider"
           /> */}
           <div className={styles.founderImgDiv}>
-            <img src="/Pictures/founder.png" alt="exotic-goa-founder" />
+            <img src="https://res.cloudinary.com/duh71fcas/image/upload/v1754067505/Exotic%20data/Pictures/founder.webp" alt="exotic-goa-founder" />
           </div>
           <div className={styles.founderDescriptionContainer}>
             <h3>About Our Founder</h3>

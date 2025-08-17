@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/Corporate/CorporateCarousel.module.css";
 import NavBar from "../NavBar";
-import { useImages } from "../../context/CarouselContext";
+
 
 function CorporateCarousel() {
-  const images = useImages();
+  const images = [];
   const settings = {
     dots: false,
     infinite: true,
@@ -43,7 +43,7 @@ function CorporateCarousel() {
     <div className={styles.carouselContainer}>
       <NavBar></NavBar>
       <Slider {...settings} className={styles.slider}>
-        {images["corporateCarousel"].map((img, index) => {
+        {images.map((img, index) => {
           return (
             <div key={index} className={styles.imgsSlide}>
               <img src={img} alt={img} />

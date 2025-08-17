@@ -20,7 +20,7 @@ import Gallery from "./pages/Gallery";
 import MoodBoard from "./components/MoodBoard";
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 500 });
+    AOS.init({ duration: 1000 });
   }, []);
   return (
     <Router>

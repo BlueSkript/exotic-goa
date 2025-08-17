@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/Services/ServicesCarousel.module.css";
 import NavBar from "../NavBar";
-import { useImages } from "../../context/CarouselContext";
+
 
 function ServicesCarousel() {
-  const images = useImages();
+  const images = [];
   const settings = {
     dots: false,
     infinite: true,
@@ -43,7 +43,7 @@ function ServicesCarousel() {
     <div className={styles.carouselContainer}>
       <NavBar></NavBar>
       <Slider {...settings} className={styles.slider}>
-        {images["servicesCarousel"].map((img, index) => {
+        {images.map((img, index) => {
           return (
             <div key={index} className={styles.imgsSlide}>
               <img src={img} alt={img} />

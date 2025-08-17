@@ -52,7 +52,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0;
+  padding: 10rem 0;
   gap: 8rem;
 }
 
@@ -105,12 +105,12 @@
   width: 30%;
 }
 
-.serviceCard.highlight {
+/* .serviceCard.highlight {
   border: 1px solid var(--primary-color);
-  /* box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.5); */
+  box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.5);
 
   border-radius: 20px;
-}
+} */
 
 @media screen and (max-width: 1000px) {
   .servicesLandingContainer {

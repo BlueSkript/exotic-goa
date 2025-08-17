@@ -3,9 +3,11 @@ import styles from "../styles/Footer.module.css";
 import { Link } from "react-router";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import logo from '/public/logos/exotic-goa-logo.png'
+import logo from "/logos/exotic-goa-logo.png";
 import { FaLinkedinIn } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 
 function Footer() {
   return (
@@ -17,21 +19,26 @@ function Footer() {
           the city of Margao.
         </span>
         <div className={styles.socialsIconsContainer}>
-          <span className={styles.iconContainer}>
-            <CiTwitter className={styles.icon} />
-          </span>
-          <span className={styles.iconContainer}>
-            <FaFacebookF className={styles.icon} />
-          </span>
-          <span className={styles.iconContainer}>
-            <FaYoutube className={styles.icon} />
-          </span>
-          <span className={styles.iconContainer}>
-            <FaInstagram className={styles.icon} />
-          </span>
-          <span className={styles.iconContainer}>
-            <FaLinkedinIn className={styles.icon} />
-          </span>
+          <a href="https://www.facebook.com/share/1F1Kuoah3Y/">
+            <span className={styles.iconContainer}>
+              <FaFacebookF className={styles.icon} />
+            </span>
+          </a>
+          <a href="https://www.youtube.com/@exoticgoa_events">
+            <span className={styles.iconContainer}>
+              <FaYoutube className={styles.icon} />
+            </span>
+          </a>
+          <a href="https://www.instagram.com/exotic_goa?igsh=NnhwaGlrczhiNTdq">
+            <span className={styles.iconContainer}>
+              <RiInstagramFill className={styles.icon} />
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/company/exoticgoa/">
+            <span className={styles.iconContainer}>
+              <FaLinkedinIn className={styles.icon} />
+            </span>
+          </a>
         </div>
         <div className={styles.footserContainerOne}>
           <div className={styles.quickLinksContainer}>
@@ -64,14 +71,14 @@ function Footer() {
 
           <div className={styles.exploreMoreContiner}>
             <h5>Explore</h5>
-            <Link className={styles.expoloreMoreLink}>FAQ</Link>
+            {/* <Link className={styles.expoloreMoreLink}>FAQ</Link> */}
             <Link
               to={"/exotic-goa-gallery"}
               className={styles.expoloreMoreLink}>
               Gallery
             </Link>
-            <Link className={styles.expoloreMoreLink}>Wedding</Link>
-            <Link className={styles.expoloreMoreLink}>Mice Corporate</Link>
+            {/* <Link className={styles.expoloreMoreLink}>Wedding</Link> */}
+            {/* <Link className={styles.expoloreMoreLink}>Mice Corporate</Link> */}
             <Link to={"/moodboard"} className={styles.expoloreMoreLink}>
               Moodboard
             </Link>

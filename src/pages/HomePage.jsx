@@ -8,73 +8,32 @@ import CorporateCarousel from "../components/Home/CorporateCarousel";
 import PortfolioGallery from "../components/Home/PortfolioGallery";
 import MilestonesCarousel from "../components/Home/MilestonesCarousel";
 import { FaInstagram } from "react-icons/fa";
-import { TbUrgent } from "react-icons/tb";
+
 function HomePage() {
-  const weddingsRef = useRef(null);
-  const isWeddingsInView = useInView(weddingsRef, {
-    triggerOnce: true,
-    margin: "-100px",
-  });
-
-  const weddingCarousel = useRef(null);
-  const isWeddingsCarouselInView = useInView(weddingCarousel, {
-    triggerOnce: true,
-    margin: "-100px",
-  });
-
-  const aboutusRef = useRef(null);
-  const isAboutUsInView = useInView(aboutusRef, {
-    triggerOnce: true,
-    margin: "-100px",
-  });
-  const founderRef = useRef(null);
-  const isFounderInView = useInView(founderRef, {
-    triggerOnce: true,
-    margin: "-100px",
-  });
-
-  const corporateRef = useRef(null);
-  const isCorporateInView = useInView(corporateRef, {
-    triggerOnce: true,
-    margin: "-100px",
-  });
-
-  const portfolioRef = useRef(null);
-  const isPortfolioInView = useInView(portfolioRef, {
-    triggerOnce: true,
-    margin: "-100px",
-  });
-
-  const milestonesRef = useRef(null);
-  const isMilestonesInView = useInView(milestonesRef, {
-    triggerOnce: true,
-    margin: "-100px",
-  });
-
   const instagramPosts = [
     {
       link: "https://www.instagram.com/p/C94s9_nJpml/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      imgSrc: "/instagram/exotic-instagram-img1.heic",
+      imgSrc: "https://res.cloudinary.com/duh71fcas/image/upload/v1754124913/Exotic%20data/instagram/ghqy41diyudezunhekdn_zyz2va.webp",
     },
     {
       link: "https://www.instagram.com/p/DB3FS8aJcEC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      imgSrc: "/instagram/exotic-instagram-img2.heic",
+      imgSrc: "https://res.cloudinary.com/duh71fcas/image/upload/v1754124896/Exotic%20data/instagram/arbyajsn99qujkfdbp62_odrftn.webp",
     },
     {
       link: "https://www.instagram.com/p/DCET6CSPSmU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      imgSrc: "/instagram/exotic-instagram-img3.heic",
+      imgSrc: "https://res.cloudinary.com/duh71fcas/image/upload/v1754124943/Exotic%20data/instagram/ztjlgrabrrvq7onmz0n0_ll5kvn.webp",
     },
     {
       link: "https://www.instagram.com/p/DDtPXcgP2S3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      imgSrc: "/instagram/exotic-instagram-img4.heic",
+      imgSrc: "https://res.cloudinary.com/duh71fcas/image/upload/v1754124897/Exotic%20data/instagram/gcm3qci8vmcki5fakxme_vpfpj3.webp",
     },
     {
       link: "https://www.instagram.com/p/DBtNIWnofdj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      imgSrc: "/instagram/exotic-instagram-img5.jpg",
+      imgSrc: "https://res.cloudinary.com/duh71fcas/image/upload/v1754124938/Exotic%20data/instagram/p2ysxmkbydorqoc9v5ye_fszcii.webp",
     },
     {
       link: "https://www.instagram.com/p/DBtNIWnofdj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      imgSrc: "/instagram/exotic-instagram-img6.jpg",
+      imgSrc: "https://res.cloudinary.com/duh71fcas/image/upload/v1754124941/Exotic%20data/instagram/wqsswfja9u3czrqpkvj8_s5iui3.webp",
     },
   ];
 
@@ -88,13 +47,11 @@ function HomePage() {
         subtitle={"Discover Goa, Experience Exotic"}
       />
 
-      <motion.div
-        ref={aboutusRef}
-        initial={{ opacity: 0, translateY: 50 }}
-        animate={isAboutUsInView ? { opacity: 1, translateY: 0 } : {}}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className={styles.aboutUsLanding}>
-        <div className={styles.aboutusLandingContainer}>
+      <div className={styles.aboutUsLanding}>
+        <div
+          data-aos="fade-right"
+          data-aos-once="true"
+          className={styles.aboutusLandingContainer}>
           <h3>"Where Everything Begins...."</h3>
           <p>
             Welcome to Exotic Goa Events, a luxurious event company situated in
@@ -109,10 +66,13 @@ function HomePage() {
           </p>
         </div>
 
-        <div className={styles.aboutusLandingContainer}>
+        <div
+          data-aos="fade-left"
+          data-aos-once="true"
+          className={styles.aboutusLandingContainer}>
           <h3>When did our journey begin?....</h3>
           <p>
-            With 13 years of experience in the events industry, our founder,
+            With 18+ years of experience in the events industry, our founder,
             Seby Noronha, embarked on his own venture, Exotic Goa, in February
             2018. Our mission is to create meaningful experiences that bring
             people together through unforgettable events. With insight, empathy,
@@ -128,23 +88,24 @@ function HomePage() {
           <h3>We Curate Special Moments Into Memories</h3>
           <span className={styles.line}></span>
         </div> */}
-      </motion.div>
-      <motion.div
-        ref={founderRef}
-        initial={{ opacity: 0, translateY: 50 }}
-        animate={isFounderInView ? { opacity: 1, translateY: 0 } : {}}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className={styles.founderContainer}>
+      </div>
+      <div className={styles.founderContainer}>
         <div className={styles.founderSubContainer}>
           {/* <img
             className={styles.blob}
             src="/dividers/corporate-divider.svg"
             alt="divider"
           /> */}
-          <div className={styles.founderImgDiv}>
-            <img src="/Pictures/founder.png" alt="exotic-goa-founder" />
+          <div
+            data-aos="fade-right"
+            data-aos-once="true"
+            className={styles.founderImgDiv}>
+            <img src="https://res.cloudinary.com/duh71fcas/image/upload/v1754067505/Exotic%20data/Pictures/founder.webp" alt="exotic-goa-founder" />
           </div>
-          <div className={styles.founderDescriptionContainer}>
+          <div
+            data-aos="fade-left"
+            data-aos-once="true"
+            className={styles.founderDescriptionContainer}>
             <h3>About Our Founder</h3>
             <header>Mr. Seby Noronha</header>
             <p>
@@ -152,7 +113,7 @@ function HomePage() {
               Goa Events, which is situated in the picturesque state of Goa. Our
               expertise spans across event production, wedding planning and
               corporate events. <br />
-              <br /> With over 13 years of experience, I take immense honour in
+              <br /> With over 18+ years of experience, I take immense honour in
               leading a team of talented, dedicated, detail-oriented and
               ethusisatic professionals. Each day, my energies revolves in
               realizing Exotic Goa's mission: to unite people through
@@ -163,20 +124,18 @@ function HomePage() {
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        ref={weddingsRef}
-        initial={{ opacity: 0, translateY: 50 }}
-        animate={isWeddingsInView ? { opacity: 1, translateY: 0 } : {}}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className={styles.weddingsSection}>
+      <div className={styles.weddingsSection}>
         <HeadingTItle
           key={"wedding"}
           title={"Weddings"}
           subtitle={"Our Best Memories"}
         />
-        <div className={styles.weddingDescriptionHome}>
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          className={styles.weddingDescriptionHome}>
           <p>
             Envision the wedding of your dreams against the backdrop of the
             white sandy beaches of Goa?. This is what we can do for you! Our
@@ -190,25 +149,25 @@ function HomePage() {
           </p>
         </div>
         <WeddingHomeCarousel />
-      </motion.div>
+      </div>
 
-      <motion.div
-        ref={corporateRef}
-        initial={{ opacity: 0, translateY: 50 }}
-        animate={isCorporateInView ? { opacity: 1, translateY: 0 } : {}}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className={styles.corporateContainer}>
+      <div className={styles.corporateContainer}>
         <img
           src="/dividers/corporate-divider.svg"
           alt="page-divider"
           className={styles.blob}
         />
         <HeadingTItle
+          data-aos="fade-up"
+          data-aos-once="true"
           key={"corporate"}
           title={"Corporate"}
           subtitle={"Our Best Memories"}
         />
-        <div className={styles.corporateDescContainer}>
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          className={styles.corporateDescContainer}>
           <p>
             Elevate leadership with strategic corporate events, fostering
             colloboration and culture. Employees feel appreciated and build
@@ -222,13 +181,11 @@ function HomePage() {
           </p>
         </div>
         <CorporateCarousel />
-      </motion.div>
+      </div>
 
-      <motion.div
-        ref={portfolioRef}
-        initial={{ opacity: 0, translateY: 50 }}
-        animate={isPortfolioInView ? { opacity: 1, translateY: 0 } : {}}
-        transition={{ duration: 1, ease: "easeInOut" }}
+      <div
+        data-aos="fade-up"
+        data-aos-once="true"
         className={styles.portfolioContainer}>
         <img
           src="/dividers/portfolio-divider.svg"
@@ -238,14 +195,12 @@ function HomePage() {
         <HeadingTItle title={"Portfolio"} subtitle={"Our Best Memories"} />
 
         <PortfolioGallery />
-      </motion.div>
+      </div>
 
       <div
-       ref={milestonesRef}
-       initial={{ opacity: 0, translateY: 50 }}
-       animate={isMilestonesInView ? { opacity: 1, translateY: 0 } : {}}
-       transition={{ duration: 1, ease: "easeInOut" }}
-      className={styles.ourFeaturedContainer}>
+        data-aos="fade-up"
+        data-aos-once="true"
+        className={styles.ourFeaturedContainer}>
         <img
           src="/dividers/corporate-divider.svg"
           alt="page-divider"
@@ -256,12 +211,7 @@ function HomePage() {
         <MilestonesCarousel />
       </div>
 
-      <motion.div
-        ref={milestonesRef}
-        initial={{ opacity: 0, translateY: 50 }}
-        animate={isMilestonesInView ? { opacity: 1, translateY: 0 } : {}}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className={styles.instagramSection}>
+      <div className={styles.instagramSection}>
         <img
           src="/dividers/portfolio-divider.svg"
           alt="page-divider"
@@ -270,13 +220,17 @@ function HomePage() {
 
         <div className={`${styles.titleContainer} ${styles.instaTitle}`}>
           <h2>Instagram</h2>
-          <div className={styles.subtitleContainer}>
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            className={styles.subtitleContainer}>
             <div className={styles.subtitleBar}></div>
             <span>Our Latest</span>
             <div className={styles.subtitleBar}></div>
           </div>
         </div>
-        <div className={styles.instagramImgConainer}>
+        <div data-aos="fade-up"
+            data-aos-once="true" className={styles.instagramImgConainer}>
           {instagramPosts.map((post, index) => {
             return (
               <div className={styles.instagramImgDiv} key={`${post} ${index}`}>
@@ -293,7 +247,7 @@ function HomePage() {
           alt="divider"
           className={styles.footerDivider}
         /> */}
-      </motion.div>
+      </div>
     </>
   );
 }

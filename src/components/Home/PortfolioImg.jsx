@@ -1,21 +1,21 @@
 import React from "react";
-import { useImages } from "../../context/CarouselContext";
+
 import styles from "../../styles/Home/PortfolioImg.module.css";
 
 function PortfolioImg() {
-  const images = useImages();
+  const images = [];
   return (
     <div className={styles.portfolioContainer}>
       <div className={styles.imgsContainer}>
         <header>Weddings</header>
         <img
           className={styles.underline}
-          src="/public/dividers/underline.svg"
+          src="/dividers/underline.svg"
           alt="underline"
         />
         <div
           className={`${styles.weddingsPortfolioContainer} ${styles.imgsSubContainer}`}>
-          {images["portfolioWedding"].map((img, index) => {
+          {images.map((img, index) => {
             return (
               <div className={styles.imgBox} key={`${img} ${index}`}>
                 <img src={img} alt={img} className={styles.subImages} />
@@ -29,7 +29,7 @@ function PortfolioImg() {
         <header>Mice Corporate</header>
         <img
           className={styles.underline}
-          src="/public/dividers/underline.svg"
+          src="/dividers/underline.svg"
           alt="underline"
         />
         <div
@@ -48,7 +48,7 @@ function PortfolioImg() {
         <header>Hospitality</header>
         <img
           className={styles.underline}
-          src="/public/dividers/underline.svg"
+          src="/dividers/underline.svg"
           alt="underline"
         />
         <div
@@ -67,7 +67,7 @@ function PortfolioImg() {
         <header>Luxury Furniture</header>
         <img
           className={styles.underline}
-          src="/public/dividers/underline.svg"
+          src="/dividers/underline.svg"
           alt="underline"
         />
         <div

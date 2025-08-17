@@ -8,6 +8,9 @@
   gap: 1rem;
 }
 
+.homeContactUsBtnContainer{
+  text-decoration: none;
+}
 .landingVideoContainer {
   width: 100%;
   height: 100vh;
@@ -130,15 +133,20 @@
 }
 
 .navyReelContainer {
-  width: 50%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.navyReelContainer img {
-  width: 100%;
-  height: 400px;
+.navyReelContainer video {
+  width: 60%;
+  height: 550px;
   aspect-ratio: 19/6;
   object-fit: cover;
+  object-position: center;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 .blob {
@@ -213,13 +221,17 @@
 }
 
 .content h1 {
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family:'Times New Roman', Times, serif !important;
   margin-bottom: 1rem;
+  font-style: italic;
 }
 .contentContainerLeft header {
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: 'Times New Roman', Times, serif !important;
   font-size: 1.2em;
   font-weight: 350;
+}
+.address{
+  font-family: 'Times New Roman', Times, serif !important;
 }
 
 .contentContainerLeft .content p {
@@ -230,9 +242,9 @@
 
 .carouselContentContainer h5 {
   text-align: right;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 3rem;
+  font-style: italic;
   font-weight: 500;
 }
 
@@ -257,12 +269,62 @@
   scale: 0.9;
 }
 
+.wideReel{
+  width: 50%;
+}
+
+
+
 @media screen and (max-width: 1500px) {
   .carouselContentContainer {
     padding: 0;
     padding-bottom: 2rem;
   }
+
+  .weddingsReelsContainer{
+    width: 100%;
+  
+  }
 }
+
+@media screen and (max-width: 1000px) {
+  .carouselContentContainer{
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+  .corporateContainer span {
+    width: 90%;
+    text-align: justify;
+  }
+
+  .weddingsReelsContainer {
+    flex-direction: column;
+    
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0px;
+  }
+
+  .reelContainer {
+    width: 50%;
+  }
+
+  .subtitleContainer span{
+    text-align: center;
+  }
+
+  .navyReelContainer{
+    
+    width: 90%;
+  }
+
+  .navyReelContainer video{
+   
+    width: 100%;
+  }
+}
+
 
 @media screen and (max-width: 700px) {
   .carouselContentContainer {
@@ -326,37 +388,19 @@
   .reelContainer{
     width: 90%;
   }
-}
-
-@media screen and (max-width: 1000px) {
-  .carouselContentContainer{
-    justify-content: center;
-    padding: 0;
-    padding-bottom: 2rem;
-  }
-  .corporateContainer span {
-    width: 90%;
-    text-align: justify;
-  }
-
-  .weddingsReelsContainer {
-    flex-direction: column;
-    
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 0px;
-  }
-
-  .reelContainer {
-    width: 60%;
-  }
-
-  .subtitleContainer span{
-    text-align: center;
-  }
 
   .navyReelContainer{
     
-    width: 60%;
+    width: 90%;
+    height: 300px;
+    object-fit: contain;
+  }
+
+
+  .navyReelContainer video{
+   
+    width: 100%;
+    height: 300px;
   }
 }
+

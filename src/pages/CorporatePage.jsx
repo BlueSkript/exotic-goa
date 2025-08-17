@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "../styles/Corporate/CorporatePage.module.css";
-import CorporateCarousel from "../components/Corporate/CorporateCarousel";
-import HeadingTItle from "../components/Home/HeadingTItle";
-import landingVideo from "/public/videos/corporate.mp4";
+
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
+
+import poster from "/videoPosters/corporateLandingPoster.png";
+
+import { Link } from "react-router";
 function CorporatePage() {
   return (
     <>
@@ -12,7 +14,12 @@ function CorporatePage() {
 
       <div className={styles.landingVideoContainer}>
         <NavBar />
-        <video src={landingVideo} muted autoplay="true" loop></video>
+        <video
+          poster={poster}
+          src="https://res.cloudinary.com/duh71fcas/video/upload/v1754072438/Exotic%20data/Videos/corporate.mp4"
+          muted
+          autoPlay
+          loop></video>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -25,43 +32,55 @@ function CorporatePage() {
               transition={{ duration: 1, ease: "easeInOut" }}
               className={styles.contentContainerLeft}>
               <div className={styles.content}>
-                <h1>Exotic Mice Global</h1>
+                <h1>Exotic Global MICE Solutions</h1>
                 <p>
-                  Wedding Management | Decor <br />
-                  Mice Global | Luxury Furniture <br />
-                  India, Goa
+                  Event Management | Corporate Events | Special Occasions |
+                  Global Corporate
                 </p>
               </div>
               <header>We create experiences</header>
-              <p>India, Goa</p>
-              <a className={styles.homeContactUsBtn} href="">
-                Contact Us
-              </a>
+              <p className={styles.address}>India, Goa</p>
+              <Link
+                className={styles.homeContactUsBtnContainer}
+                to={"/contact-us"}>
+                <a className={styles.homeContactUsBtn} href="">
+                  Contact Us
+                </a>
+              </Link>
             </motion.div>
 
             <motion.h5
               initial={{ opacity: 0, translateX: 70 }}
               animate={{ opacity: 1, translateX: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}>
-              Where Every Celebration <br /> Becomes a Timeless Experience!
+              Where vision meets precision <br />
+              crafting world-class experiences globally.
             </motion.h5>
           </div>
         </motion.div>
       </div>
+
       <div className={styles.corporateContainer}>
         <div className={styles.titleContainer}>
-          <h2>Begin Your Event or Meetings With Us Here</h2>
-          <div className={styles.subtitleContainer}>
+          <h2 data-aos="fade-up" data-aos-once="true">
+            {" "}
+            Begin Your Event or Meetings With Us Here
+          </h2>
+          <div
+            className={styles.subtitleContainer}
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-delay={100}>
             <div className={styles.subtitleBar}></div>
             <span>
               Share your event details with us, and we'll reach out to
-              collaboratively play this together{" "}
+              collaboratively play this together
             </span>
             <div className={styles.subtitleBar}></div>
           </div>
         </div>
 
-        <span>
+        <span data-aos="fade-up" data-aos-once="true">
           At Exotic Goa Events, we understand the multifacted nature of
           corporate events, each having their own goals and objectives. An event
           that is successful is coupled with a conception of its purpose,
@@ -82,33 +101,48 @@ function CorporatePage() {
         </span>
 
         <div className={styles.weddingsReelsContainer}>
-          <div className={styles.reelContainer}>
-            <header className={styles.reelHeadijng}>Mice Corporate</header>
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-delay={100}
+            className={styles.reelContainer}>
             <video
-              autoplay="true"
+              autoPlay
               loop
               muted
               controls
-              src="/reels/reel1.mp4"></video>
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754125659/Exotic%20data/Corporate%20Page/An_wXfZ5MW0CJ7KfVD00P1WdEYYmh9N-8xFuBXdoMFeaUMrDPuOxTlXHFJHobyVbWA-KWD3-TwMFZZc3qeUjrApi_plxwrc.mp4"
+              }></video>
           </div>
 
-          <div className={styles.reelContainer}>
-            <header className={styles.reelHeadijng}>Product Launch</header>
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-delay={200}
+            className={`${styles.reelContainer}  ${styles.wideReel}`}>
             <video
-              autoplay="true"
+              autoPlay
               loop
               muted
               controls
-              src="/reels/reel1.mp4"></video>
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754144971/Exotic%20data/Corporate%20Page/EVENT_SHOOT_jhqghq.mp4"
+              }></video>
           </div>
-          <div className={styles.reelContainer}>
-            <header className={styles.reelHeadijng}>Social Events</header>
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-delay={300}
+            className={styles.reelContainer}>
             <video
-              autoplay="true"
+              autoPlay
               loop
               muted
               controls
-              src="/reels/reel1.mp4"></video>
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754125661/Exotic%20data/Corporate%20Page/instasave_2_f67bte.mp4"
+              }></video>
           </div>
         </div>
       </div>
@@ -120,8 +154,13 @@ function CorporatePage() {
           className={styles.blob}
         />
         <div className={styles.titleContainer}>
-          <h2>Our Work For Navy</h2>
-          <div className={styles.subtitleContainer}>
+          <h2 data-aos="fade-up" data-aos-once="true">
+            Our Work For Navy
+          </h2>
+          <div
+            className={styles.subtitleContainer}
+            data-aos="fade-up"
+            data-aos-once="true">
             <div className={styles.subtitleBar}></div>
             <span>
               Crafting Unforgettable Events with Precision & Honor – Proudly
@@ -131,8 +170,17 @@ function CorporatePage() {
           </div>
         </div>
 
-        <div className={styles.navyReelContainer}>
-          <img src="/Pictures/shal0071.jpg"></img>
+        <div
+          className={styles.navyReelContainer}
+          data-aos="fade-up"
+          data-aos-once="true">
+          <video
+            autoPlay
+            loop
+            muted
+            controls
+            poster={poster}
+            src="https://res.cloudinary.com/duh71fcas/video/upload/v1754072438/Exotic%20data/Videos/corporate.mp4"></video>
         </div>
 
         {/* <img
