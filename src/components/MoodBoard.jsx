@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "../styles/MoodBoard.module.css";
 import NavBar from "./NavBar";
-import mood1 from "/moodboard/moodboard2.jpg";
 
-import mood2 from "/moodboard/moodboard4.jpg";
-import mood3 from "/moodboard/moodboard5.jpg";
-import mood4 from "/moodboard/moodboard3.jpg";
 function MoodBoard() {
   return (
     <>
