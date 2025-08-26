@@ -131,6 +131,7 @@
   font-size: 3rem;
   font-style: italic;
   font-weight: 500;
+ 
 
 }
 
@@ -221,5 +222,8 @@
   .carouselContentContainer h5 {
     text-align: center;
     font-size: 2.3rem;
+    transform: skewX(10deg) !important; 
+  display: inline-block;
+
   }
 }

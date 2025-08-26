@@ -49,7 +49,7 @@ function HomePage() {
 
       <div className={styles.aboutUsLanding}>
         <div
-          data-aos="fade-right"
+          data-aos="fade-up"
           data-aos-once="true"
           className={styles.aboutusLandingContainer}>
           <h3>"Where Everything Begins...."</h3>
@@ -67,7 +67,7 @@ function HomePage() {
         </div>
 
         <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-once="true"
           className={styles.aboutusLandingContainer}>
           <h3>When did our journey begin?....</h3>
@@ -97,13 +97,13 @@ function HomePage() {
             alt="divider"
           /> */}
           <div
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-once="true"
             className={styles.founderImgDiv}>
             <img src="https://res.cloudinary.com/duh71fcas/image/upload/v1754067505/Exotic%20data/Pictures/founder.webp" alt="exotic-goa-founder" />
           </div>
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-once="true"
             className={styles.founderDescriptionContainer}>
             <h3>About Our Founder</h3>
