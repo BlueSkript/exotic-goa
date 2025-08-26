@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Corporate/CorporatePage.module.css";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
-
+import mobileCarouselImages from '../../JSONs/Mice Phone View.json'
 import poster from "/videoPosters/corporateLandingPoster.png";
 
 import { Link } from "react-router";
@@ -15,18 +17,51 @@ function CorporatePage() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    fade: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       {/* <CorporateCarousel /> */}
 
       <div className={styles.landingVideoContainer}>
         <NavBar />
-        <video
+       {!isMobile && ( <video
           poster={poster}
           src="https://res.cloudinary.com/duh71fcas/video/upload/v1754072438/Exotic%20data/Videos/corporate.mp4"
           muted
           autoPlay
-          loop></video>
+          loop></video>)}
+    
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -65,6 +100,15 @@ function CorporatePage() {
             </motion.h5>
           </div>
         </motion.div>
+        {isMobile && (<Slider {...settings} className={styles.slider}>
+        {mobileCarouselImages.map((img, index) => {
+          return (
+            <div key={index} className={styles.imgsSlide}>
+              <img src={img} alt={img} />
+            </div>
+          );
+        })}
+      </Slider>)}
       </div>
 
       <div className={styles.corporateContainer}>
