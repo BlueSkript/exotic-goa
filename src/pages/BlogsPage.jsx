@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Blogs/Blog.module.css";
 import NavBar from "../components/NavBar";
 import { Link, useNavigate } from "react-router";
 import { BlogsProvider, useBlogs } from "../context/BlogsContext";
+import mobileCarouselImages from "../../JSONs/Phone View.json";
 
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 
 function BlogsPage() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+useEffect(() => {
+  const handleResize = () => setIsMobile(window.innerWidth < 768);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+const [duplicatedItems, setDuplicatedItems] = useState([]);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -86,7 +96,7 @@ function BlogsPage() {
           </div>
         </motion.div>
         <Slider {...settings} className={styles.slider}>
-          {images.map((img, index) => {
+          {(isMobile ? mobileCarouselImages: images).map((img, index) => {
             return (
               <div key={index} className={styles.imgsSlide}>
                 <img src={img} alt={img} />
