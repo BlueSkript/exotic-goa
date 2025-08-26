@@ -9,6 +9,7 @@
   --secondary-color: #f9f5ea;
   --text-color: #5e6e5f;
   --text-secondary: white;
+  --heading-font: "Ivy" , serif;
 }
 html {
   font-size: 16px;
@@ -45,4 +46,60 @@ body {
   src: url("../assets/fonts/slight-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Ivy";
+  src: url("../assets/fonts/fonnts.com-Ivy-Presto-Display-Light.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.body-lock {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Gallery overlay */
+.galleryOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Scrollable gallery container */
+.galleryContainer {
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+/* Close button */
+.closeButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: white;
+  color: black;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

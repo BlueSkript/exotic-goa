@@ -206,14 +206,16 @@
 }
 
 .content h1 {
-  font-family: "Times New Roman", Times, serif !important;
+  font-family: var(--heading-font) !important;
+  font-weight: 500;
   margin-bottom: 1rem;
   font-style: italic;
 }
 .contentContainerLeft header {
-  font-family: "Times New Roman", Times, serif !important;
+   font-family: var(--heading-font) !important;
+  font-weight: 500;
   font-size: 1.2em;
-  font-weight: 350;
+
 }
 
 .contentContainerLeft .content p {
@@ -224,12 +226,14 @@
 }
 
 .address {
-  font-family: "Times New Roman", Times, serif !important;
+   font-family: var(--heading-font) !important;
+  font-weight: 500;
 }
 
 .carouselContentContainer h5 {
   text-align: right;
-  font-family: "Times New Roman", Times, serif !important;
+   font-family: var(--heading-font) !important;
+  font-weight: 500;
   font-size: 3rem;
   font-style: italic;
 

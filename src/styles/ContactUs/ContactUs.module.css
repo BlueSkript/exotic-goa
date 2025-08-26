@@ -31,7 +31,7 @@
 
 .formContainer h3 {
   text-align: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--heading-font), sans-serif;
   font-size: 3rem;
   color: var(--primary-color);
   font-weight: 350;
@@ -260,12 +260,14 @@
 }
 
 .content h1 {
-  font-family: "Times New Roman", Times, serif !important;
+   font-family: var(--heading-font) !important;
+  font-weight: 500;
   margin-bottom: 1rem;
   font-style: italic;
 }
 .contentContainerLeft header {
-  font-family: "Times New Roman", Times, serif !important;
+   font-family: var(--heading-font) !important;
+  font-weight: 500;
   font-size: 1.2em;
   font-weight: 350;
 }
@@ -504,13 +506,15 @@
 }
 
 .contentContainerLeft header {
-  font-family: "Times New Roman", Times, serif !important;
+   font-family: var(--heading-font) !important;
+  font-weight: 500;
   font-size: 1.2em;
-  font-weight: 350;
+
 }
 
 .address {
-  font-family: "Times New Roman", Times, serif !important;
+   font-family: var(--heading-font) !important;
+  font-weight: 500;
 }
 
 .contentContainerLeft .content p {

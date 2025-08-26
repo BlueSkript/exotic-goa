@@ -7,7 +7,7 @@ z-index: 10;
 }
 
 .whatsappContainer img{
-  width: 50px;
+  width: 60px;
   transition: 0.5s;
 }
 
@@ -46,7 +46,7 @@ z-index: 10;
 
 @keyframes bounce {
   0% { transform: translateY(0); }
-  30% { transform: translateY(-5px); }
+  30% { transform: translateY(-20px); }
   60% { transform: translateY(3px); }
   100% { transform: translateY(0); }
 }
@@ -54,8 +54,8 @@ z-index: 10;
 
 
 .whatsappContainer img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   transition: transform 0.3s ease-in-out;
 }
 

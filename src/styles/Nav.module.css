@@ -1,4 +1,4 @@
-nav {
+.nav {
   width: 100%;
   position: absolute;
 
@@ -21,7 +21,42 @@ nav {
     rgba(0, 0, 0, 0.655),
     rgba(0, 0, 0, 0)
   );
+ 
 }
+
+.navAlt {
+  width: 100%;
+  position: absolute;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 10;
+  top: 0;
+  background-color: white;
+}
+
+.linkAlt {
+  text-decoration: none;
+
+  font-weight: 300;
+  font-style: normal;
+  color: var(--primary-color);
+  transition: 0.5s;
+
+  position: relative;
+  display: inline-block;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.menuIconAlt {
+  color: #000;
+}
+
 
 .logo {
   width: 120px;
@@ -219,3 +254,11 @@ nav {
     font-size: 1.2rem;
   }
 }
+
+
+
+
+
+
+
+

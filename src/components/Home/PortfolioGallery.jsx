@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../../styles/Home/PortfolioGallery.module.css";
-
+import Gimages from "../../../JSONs/Gallery.json";
+import PopupGallery from "../PopupGallery";
 const images = [
   {
     src: "https://res.cloudinary.com/duh71fcas/image/upload/v1754067237/Exotic%20Data/Home%20Page/Portfolio/IMG-20250528-WA0025.webp",
@@ -25,33 +26,25 @@ const images = [
 ];
 
 export default function PortfolioGallery() {
-  const [selectedImage, setSelectedImage] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const closePopup = () => setSelectedImage(null);
 
   return (
     <div className={styles.galleryContainer}>
       {images.map((image, index) => (
         <div
           key={index}
-          className={`${styles.imageWrapper} ${
-            selectedImage === index ? styles.expanded : ""
-          }`}
-          onClick={() =>
-            setSelectedImage(selectedImage === index ? null : index)
-          }>
-          <img
-            src={image.src}
-            alt={`Thumbnail ${index}`}
-            className={styles.image}
-          />
-          {selectedImage === index && (
-            <div className={styles.imageText}>{image.text}</div>
-          )}
-
-          {selectedImage != index && (
-            <div className={styles.imageTextInactive}>{image.text}</div>
-          )}
+          className={styles.imageWrapper}
+          onClick={() => setSelectedImage(index)}>
+          <img src={image.src} alt={image.text} className={styles.image} />
+          <div className={styles.imageTextInactive}>{image.text}</div>
         </div>
       ))}
+
+      {selectedImage !== null && (
+       <PopupGallery images={Gimages} onClose={closePopup}></PopupGallery>
+      )}
     </div>
   );
 }

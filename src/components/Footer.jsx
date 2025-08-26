@@ -151,9 +151,8 @@ function Footer() {
           </div>
 
           <div className={styles.policiesContainer}>
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-            <span>Cookie Policy</span>
+          
+        
           </div>
         </div>
       </footer>

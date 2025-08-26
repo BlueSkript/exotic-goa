@@ -1,71 +1,9 @@
 import React from "react";
 import styles from "../styles/Gallery.module.css";
 import NavBar from "../components/NavBar";
-// import images from '../../JSONs/temp.json'
+import images from '../../JSONs/Gallery.json'
 function Gallery() {
-  const images = [
-"https://res.cloudinary.com/duh71fcas/image/upload/v1754068690/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/1.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068269/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/10.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068158/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/11.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068041/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/12.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068121/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/13.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754067877/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/14.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754067991/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/15.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068563/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/2.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068599/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/3.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068399/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/4.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068467/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/5.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068527/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/6.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754068493/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/7.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754067666/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/8.webp",
-  "https://res.cloudinary.com/duh71fcas/image/upload/v1754067717/Exotic%20data/Blog%20Page/Cover%20Image%20Corousel/9.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067527/Exotic%20data/Pictures/home-wedding-picture-exotic-goa-one.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067608/Exotic%20data/Pictures/home-wedding-picture-exotic-goa-three.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067565/Exotic%20data/Pictures/home-wedding-picture-exotic-goa-two.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067415/Exotic%20data/Pictures/shal0071.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067410/Exotic%20data/Pictures/shal0315.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067613/Exotic%20data/Pictures/shal0324.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067614/Exotic%20data/Pictures/shal0325.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067602/Exotic%20data/Pictures/shal0334.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067521/Exotic%20data/Pictures/shal0439.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067551/Exotic%20data/Pictures/shal9603.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067532/Exotic%20data/Pictures/shal9751.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067611/Exotic%20data/Pictures/testimonialimg.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067557/Exotic%20data/Pictures/wedding-260.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067568/Exotic%20data/Pictures/wedding-267.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067598/Exotic%20data/Pictures/wedding-271.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067547/Exotic%20data/Pictures/wedding-329.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067588/Exotic%20data/Pictures/wedding-514.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067580/Exotic%20data/Pictures/wedding-515.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067593/Exotic%20data/Pictures/wedding-516.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067539/Exotic%20data/Pictures/wedding-521.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067422/Exotic%20data/Pictures/welcome___dinner-136.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067358/Exotic%20data/temp/1.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067352/Exotic%20data/temp/10.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067347/Exotic%20data/temp/11.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067327/Exotic%20data/temp/12.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067337/Exotic%20data/temp/13.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067301/Exotic%20data/temp/14.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067303/Exotic%20data/temp/15.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067321/Exotic%20data/temp/16.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067313/Exotic%20data/temp/17.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067362/Exotic%20data/temp/18.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067268/Exotic%20data/temp/19.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067332/Exotic%20data/temp/2.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067403/Exotic%20data/temp/20.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067392/Exotic%20data/temp/21.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067287/Exotic%20data/temp/22.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067279/Exotic%20data/temp/23.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067343/Exotic%20data/temp/24.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067370/Exotic%20data/temp/25.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067318/Exotic%20data/temp/3.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067374/Exotic%20data/temp/4.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067381/Exotic%20data/temp/5.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067397/Exotic%20data/temp/6.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067384/Exotic%20data/temp/7.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067290/Exotic%20data/temp/8.webp",
-    "https://res.cloudinary.com/duh71fcas/image/upload/v1754067298/Exotic%20data/temp/9.webp",
-  ];
+  
   return (
     <>
       <NavBar />
@@ -85,11 +23,7 @@ function Gallery() {
             })}
           </div>
         </div>
-        {/* <img
-          src="/dividers/footer-divider.svg"
-          alt="divider"
-          className={styles.footerDivider}
-        /> */}
+        
       </div>
     </>
   );

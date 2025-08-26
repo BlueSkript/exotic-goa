@@ -6,6 +6,7 @@
   width: 80%;
   margin: 0 auto;
   height: 500px;
+  position: relative;
 }
 
 .imageWrapper {
@@ -64,3 +65,12 @@
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+

@@ -68,7 +68,7 @@ function OurServicesPage() {
 
   return (
     <>
-      <NavBar />
+      <NavBar bgColor={true} />
       
 
       <div className={styles.servicesContainer}>
