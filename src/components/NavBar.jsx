@@ -9,7 +9,7 @@ import logo from "/logos/exotic-goa-nav-logo.png";
 import pinkLogo from '/logos/exotic-goa-logo.png'
 
 function NavBar({ bgColor }) {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -22,9 +22,23 @@ function NavBar({ bgColor }) {
       className={`${bgColor == true ? styles.navAlt : styles.nav}`}>
       <div className={styles.hamburgerMenuContainer} onClick={toggleMenu}>
         {!menuOpen ? (
+          <>
+          <img
+            className={styles.logo}
+            src={logo}
+            alt="exotic-goa-luxury-furniture-logo"
+          />
           <RxHamburgerMenu className={styles.menuIcon} />
+          </>
         ) : (
+          <>
+          <img
+            className={styles.logo}
+            src={logo}
+            alt="exotic-goa-luxury-furniture-logo"
+          />
           <IoMdClose className={styles.menuIcon} />
+          </>
         )}
       </div>
       <div
