@@ -62,3 +62,11 @@ z-index: 10;
 .whatsappContainer img {
   animation: bounce 1s ease-in-out infinite;
 }
+
+@media (max-width:700px) {
+  .whatsappContainer img {
+    width: 40px;
+    height: 40px;
+   
+  }
+}
