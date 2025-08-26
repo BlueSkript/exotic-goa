@@ -21,6 +21,13 @@ import MoodBoard from "./components/MoodBoard";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
+
+    const imgs = document.querySelectorAll("img");
+    imgs.forEach(img => {
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
+      }
+    });
   }, []);
   return (
     <Router>

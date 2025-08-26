@@ -30,7 +30,7 @@ export default function PortfolioGallery() {
     {
       src: "https://res.cloudinary.com/duh71fcas/image/upload/v1754067240/Exotic%20Data/Home%20Page/Portfolio/IMG-20250528-WA0019.webp",
       text: "Exotic Goa Furniture",
-      gallery: [], // empty gallery, unclickable
+      gallery: [], 
     },
   ];
 

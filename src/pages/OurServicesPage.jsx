@@ -4,7 +4,7 @@ import VerticalCarousel from "../components/Services/VerticalCarousel";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
 import styles from "../styles/Services/ServicesPage.module.css";
-import carouselPictures from '../../JSONs/temp.json'
+import carouselPictures from '../../JSONs/Services section corousel.json'
 const cardData = [
   {
     name: "Venue management",
