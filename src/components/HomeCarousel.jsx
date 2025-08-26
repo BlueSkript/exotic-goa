@@ -7,6 +7,7 @@ import NavBar from "./NavBar";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import carouselImages from '../../JSONs/Cover Images.json'
+import phoneCarouselImages from '../../JSONs/Phone View.json'
 function HomeCarousel() {
 
   const settings = {
