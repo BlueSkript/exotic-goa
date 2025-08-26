@@ -447,5 +447,10 @@
     width: 100%;
     height: 300px;
   }
+
+  .titleContainer h2{
+    transform: skewX(10deg) !important; 
+    display: inline-block;
+  }
 }
 
