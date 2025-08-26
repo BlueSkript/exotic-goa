@@ -306,7 +306,7 @@
     padding: 0;
     padding-bottom: 2rem;
     margin-bottom: 0px;
-  
+  height: 100%;
   }
   .contactUsContainer {
     width: 90%;
@@ -341,6 +341,7 @@
     justify-content: center;
     padding: 0;
     padding-bottom: 2rem;
+    height: 100%;
   }
 
   .contentContainerLeft {
@@ -408,7 +409,8 @@
   }
 
   .carouselContentContainer {
-  
+  height: 100%;
+  margin-bottom: 0%;
     bottom: 0%;
   
   }
@@ -631,5 +633,9 @@
   .formContainer h3{
     transform: skewX(10deg) !important; 
     display: inline-block;
+  }
+
+  .landingVideoContainer{
+    height: 100vh;
   }
 }
