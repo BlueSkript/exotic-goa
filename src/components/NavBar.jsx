@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 
 import { motion } from "framer-motion";
 import logo from "/logos/exotic-goa-nav-logo.png";
-import pinkLogo from '/public/logos/exotic-goa-logo.png'
+import pinkLogo from '/logos/exotic-goa-logo.png'
 
 function NavBar({ bgColor }) {
   const [menuOpen, setMenuOpen] = useState(false);
