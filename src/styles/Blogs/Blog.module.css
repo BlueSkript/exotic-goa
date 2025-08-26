@@ -586,7 +586,7 @@
     width: max-content;
     transform: skewX(10deg) !important; 
     display: inline-block;
-    background-color: red;
+ 
    
   }
 }
