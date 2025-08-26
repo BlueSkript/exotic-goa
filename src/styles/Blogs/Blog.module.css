@@ -574,4 +574,19 @@
     display: inline-block;
     
   }
+  .blogsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .blogsContainer header{
+    text-align: center;
+  
+    width: max-content;
+    transform: skewX(10deg) !important; 
+    display: inline-block;
+    background-color: red;
+   
+  }
 }

@@ -10,7 +10,7 @@ import howWeDoItTwo from "/Pictures/howwedoittwo.gif";
 import howWeDoItThree from "/Pictures/howwedoitthree.gif";
 import Slider from "react-slick";
 import NavBar from "../components/NavBar";
-
+import mobileCarouselImages from '../../JSONs/Phone View.json'
 import venueImgs from "../../JSONs/Venues.json";
 import landingVideoPoster from "/videoPosters/weddingsPageLoader.png";
 
@@ -84,6 +84,7 @@ I would get married again to my husband just to get their services haha. Jokes a
 ];
 
 
+
 const settings = {
   dots: true,
   infinite: true,
@@ -101,6 +102,13 @@ const settings = {
 
 const speed = 30;
 function WeddingsPage() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+useEffect(() => {
+  const handleResize = () => setIsMobile(window.innerWidth < 768);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
   const [duplicatedItems, setDuplicatedItems] = useState([]);
 
   useEffect(() => {
@@ -119,14 +127,14 @@ function WeddingsPage() {
       {/* <WeddingsCarousel /> */}
       <div className={styles.landingVideoContainer}>
         <NavBar />
-        <video
+        {!isMobile && (<video
           poster={landingVideoPoster}
           src={
             "https://res.cloudinary.com/duh71fcas/video/upload/v1754072376/Exotic%20data/Videos/weddings.mp4"
           }
           muted
           autoPlay
-          loop></video>
+          loop></video>)}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -164,7 +172,17 @@ function WeddingsPage() {
               we will make the beginning <br /> special & memorable
             </motion.h5>
           </div>
+          
         </motion.div>
+        {isMobile && (<Slider {...settings} className={styles.slider}>
+        {mobileCarouselImages.map((img, index) => {
+          return (
+            <div key={index} className={styles.imgsSlide}>
+              <img src={img} alt={img} />
+            </div>
+          );
+        })}
+      </Slider>)}
       </div>
 
       <div className={styles.weddingsInGoaContainer}>
