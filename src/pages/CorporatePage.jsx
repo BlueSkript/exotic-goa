@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/Corporate/CorporatePage.module.css";
 
 import NavBar from "../components/NavBar";
@@ -8,6 +8,13 @@ import poster from "/videoPosters/corporateLandingPoster.png";
 
 import { Link } from "react-router";
 function CorporatePage() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       {/* <CorporateCarousel /> */}
