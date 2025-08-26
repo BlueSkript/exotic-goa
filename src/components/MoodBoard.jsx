@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 function MoodBoard() {
   return (
     <>
-      <NavBar />
+      <NavBar bgColor={true} />
       <div className={styles.moodboardContainer}>
         <div className={styles.headingContainer}>
           <h3>MoodBoard</h3>
