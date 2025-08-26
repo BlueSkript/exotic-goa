@@ -16,7 +16,7 @@
 }
 
 .instaTitle h2 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family:var(--heading-font), sans-serif;
   font-weight: 350;
 }
 

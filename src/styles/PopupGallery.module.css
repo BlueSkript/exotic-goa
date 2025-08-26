@@ -40,10 +40,14 @@
 
 }
 
+.closeIcon{
+  font-size: 2rem;
+}
+
 .galleryContainer{
   width: 100%;
   margin:0 auto;
-  /* padding: 8rem 0; */
+  padding: 8rem 0;
   position: relative;
 
 }

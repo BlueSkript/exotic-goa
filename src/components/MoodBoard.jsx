@@ -70,6 +70,32 @@ function MoodBoard() {
               <div></div>
             </div>
           </div>
+          <div className={styles.moodboardCard}>
+            <div className={styles.moodBoardImg}>
+              <img src={"https://res.cloudinary.com/duh71fcas/image/upload/v1756224580/Exotic%20data/Moodboard/ttiza0oppq0ft3sfsa4q_vxo87o.webp"} alt="exotic-moodboard" />
+            </div>
+
+            <div
+              className={`${styles.moodColorsContainer} ${styles.moodColorContainerFive}`}>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div className={styles.moodboardCard}>
+            <div className={styles.moodBoardImg}>
+              <img src={"https://res.cloudinary.com/duh71fcas/image/upload/v1756224582/Exotic%20data/Moodboard/vjrlwhcekkba6dd1anz1_d0we3l.webp"} alt="exotic-moodboard" />
+            </div>
+
+            <div
+              className={`${styles.moodColorsContainer} ${styles.moodColorContainerSix}`}>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
       
       </div>

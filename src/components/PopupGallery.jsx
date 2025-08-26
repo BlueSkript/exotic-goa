@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import styles from "../styles/PopupGallery.module.css";
+import { IoClose } from "react-icons/io5";
 
 export default function PopupGallery({ images, onClose }) {
   useEffect(() => {
@@ -14,7 +15,7 @@ export default function PopupGallery({ images, onClose }) {
   return ReactDOM.createPortal(
     <div className={styles.overlay}>
       <button className={styles.closeBtn} onClick={onClose}>
-        ✕
+        <IoClose className={styles.closeIcon} />
       </button>
       <div className={styles.galleryContainer}>
         <div className={styles.container}>

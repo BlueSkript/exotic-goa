@@ -330,7 +330,7 @@ flex-direction: row;
 }
 
 .testimonialsContainer h3 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--heading-font), sans-serif;
   color: var(--primary-color);
   font-size: 3rem;
   font-weight: 350;

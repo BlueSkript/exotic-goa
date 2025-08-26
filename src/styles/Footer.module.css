@@ -27,7 +27,7 @@
 .footserContainerOne h5 {
   color: rgb(153, 112, 56);
   font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--heading-font), sans-serif;
   margin-bottom: 1rem;
   font-weight: 500;
 }

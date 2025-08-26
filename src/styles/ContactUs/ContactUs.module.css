@@ -96,11 +96,11 @@
   scale: 0.8;
 }
 .formHeadingContainer header {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--heading-font), sans-serif;
   color: var(--primary-color);
   text-align: left;
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-weight: 350;
+  font-size: 1.7rem;
   text-align: center;
 }
 
