@@ -305,6 +305,8 @@
   .carouselContentContainer {
     padding: 0;
     padding-bottom: 2rem;
+    margin-bottom: 0px;
+  
   }
   .contactUsContainer {
     width: 90%;
@@ -405,6 +407,12 @@
     width: 100%;
   }
 
+  .carouselContentContainer {
+  
+    bottom: 0%;
+  
+  }
+
   .mapContainer {
     width: 90%;
   }
@@ -455,22 +463,7 @@
   opacity: 1;
 }
 
-.carouselContentContainer {
-  width: 100%;
-  position: absolute;
-  /* bottom: 5%; */
 
-  z-index: 2;
-  margin: 0 auto;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.7rem;
-  color: white;
-  padding: 2rem 10rem;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-}
 
 .carouselSubContainer {
   width: 90%;
