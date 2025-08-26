@@ -36,6 +36,7 @@ function HomePage() {
       imgSrc: "https://res.cloudinary.com/duh71fcas/image/upload/v1754124941/Exotic%20data/instagram/wqsswfja9u3czrqpkvj8_s5iui3.webp",
     },
   ];
+  
 
   return (
     <>

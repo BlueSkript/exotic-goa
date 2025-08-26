@@ -151,7 +151,7 @@ function Footer() {
           </div>
 
           <div className={styles.policiesContainer}>
-          
+          <span>Made by Groworthylife</span>
         
           </div>
         </div>

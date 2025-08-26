@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,6 +9,13 @@ import { Link } from "react-router";
 import carouselImages from '../../JSONs/Cover Images.json'
 import phoneCarouselImages from '../../JSONs/Phone View.json'
 function HomeCarousel() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const settings = {
     dots: false,
@@ -82,7 +89,7 @@ function HomeCarousel() {
         </div>
       </motion.div>
       <Slider {...settings} className={styles.slider}>
-        {carouselImages.map((img, index) => {
+        {(isMobile ? phoneCarouselImages : carouselImages).map((img, index) => {
           return (
             <div key={index} className={styles.imgsSlide}>
               <img src={img} alt={img} />

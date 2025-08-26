@@ -11,9 +11,9 @@ import pinkLogo from "/logos/exotic-goa-logo.png";
 function NavBar({ bgColor }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
  
   useEffect(() => {
