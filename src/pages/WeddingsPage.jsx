@@ -3,7 +3,7 @@ import HeadingTItle from "../components/Home/HeadingTItle";
 import styles from "../styles/weddings/WeddingsPage.module.css";
 import { BsWhatsapp } from "react-icons/bs";
 import { useState, useEffect } from "react";
-
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { motion } from "framer-motion";
 import howWeDoItOne from "/Pictures/howwedoitone.gif";
 import howWeDoItTwo from "/Pictures/howwedoittwo.gif";
@@ -14,47 +14,75 @@ import NavBar from "../components/NavBar";
 import venueImgs from "../../JSONs/Venues.json";
 import landingVideoPoster from "/videoPosters/weddingsPageLoader.png";
 
-
 import { Link } from "react-router";
 
 const testimonials = [
   {
-    image: "/Pictures/testimonialimg.jpeg",
-    text: `I had an amazing experience planning my wedding with Exotic.
-      They’re efficient, in the know, creative, caring, and passionate
-      about what they do. I didn’t have to second guess their execution,
-      which is what every bride stresses about. They did the wedding for
-      us with the same affection and love that a family member would do.
-      There were no cutting corners. They were always on our team, and
-      meticulous in the process. I couldn’t recommend them more. Preeti
-      from the team was especially amazing!`,
-    author: "- Maithili Parikh",
+    textOne: `We were beyond thrilled with our decision to choose Exotic Goa as our wedding planners. 
+From our very first interaction with Preeti and Sidaarth, it was evident that we were in capable hands. 
+Unlike other planners, they didn't just say "yes" to everything; instead, they provided genuine feedback 
+and suggestions that truly enhanced our vision.`,
+    textTwo: `Throughout the entire process, their communication was impeccable. 
+Preeti was always available (despite the time difference), and her dedication to ensuring every detail was perfect 
+was truly remarkable. On the big day, their team worked tirelessly to transform each venue into exactly what 
+we had envisioned. Preeti's coordination was flawless, ensuring that everything ran smoothly and on schedule. 
+Our guests were absolutely blown away by the result, and we owe it all to Exotic Goa for making our dream wedding 
+a reality. We can't thank them enough for their professionalism, creativity, and commitment to excellence.`,
+    author: "- Ria Odedra",
   },
   {
-    image: "/Pictures/testimonialimg.jpeg",
-    text: `I had an amazing experience planning my wedding with Exotic.
-      They’re efficient, in the know, creative, caring, and passionate
-      about what they do. I didn’t have to second guess their execution,
-      which is what every bride stresses about. They did the wedding for
-      us with the same affection and love that a family member would do.
-      There were no cutting corners. They were always on our team, and
-      meticulous in the process. I couldn’t recommend them more. Preeti
-      from the team was especially amazing!`,
-    author: "- Maithili Parikh",
+    textOne: `I recently had the pleasure of working with Exotic Goa for my wedding decor and I couldn't be happier with the results. 
+Their attention to detail was impeccable, creating a magical atmosphere that exceeded my expectations. 
+The team was not only professional but also incredibly creative, turning my vision into a reality. 
+Every guest was in awe of the stunning decor, and it truly elevated the entire wedding experience.`,
+    textTwo: `I highly recommend this vendor to anyone seeking top-notch wedding decor services in Goa. 
+I would also like to give a special mention to Vishal and Simral who were extremely cooperative and supportive throughout the process. 
+Vishal with his management and execution skills and Simral with her creativity made a fabulous team.`,
+    author: "- Snehal Choudhary",
   },
   {
-    image: "/Pictures/testimonialimg.jpeg",
-    text: `I had an amazing experience planning my wedding with Exotic.
-      They’re efficient, in the know, creative, caring, and passionate
-      about what they do. I didn’t have to second guess their execution,
-      which is what every bride stresses about. They did the wedding for
-      us with the same affection and love that a family member would do.
-      There were no cutting corners. They were always on our team, and
-      meticulous in the process. I couldn’t recommend them more. Preeti
-      from the team was especially amazing!`,
-    author: "- Maithili Parikh",
+    textOne: `From the moment we began working with Kelista, we knew we were in expert hands. 
+Her vision, professionalism, and passion for wedding decor went far beyond our expectations. 
+Kelista and her team at Exotic Goa didn’t just deliver—they outperformed on every level.`,
+    textTwo: `She took our ideas and elevated them into something magical. Every detail, from the floral arrangements to the lighting and personalized touches, was executed flawlessly. 
+Guests are still raving about how beautiful and unique the decor was—and it’s all thanks to Kelista’s incredible eye for design and dedication to perfection.
+If you’re looking for someone who truly cares about making your day special and stress-free, Kelista is the one. 
+I cannot recommend Exotic Goa enough. She turned our dream wedding into a reality—and then some. 
+Thank you, Kelista, for making our day unforgettable.`,
+    author: "- Prerna Arora",
+  },
+  {
+    textOne: `Planning a wedding in India while living abroad is not an easy task, but Exotic Goa is here to support you through this journey 
+and make your wedding as special as you have ever dreamt of. 
+I’m sure while looking for a wedding planner, you will look for a team that is working in harmony with all the right expertise under one umbrella… I advise you to look no further…`,
+    textTwo: `Be it décor, hospitality, shadows, creatives, guest management, working and managing the venue team/vendors - every aspect was well thought and planned by Exotic for us. 
+Exotic’s remarkable team was there every step of the way, in full capacity to make our day special, impeccable… almost perfect and memorable for us, our family and guests attending.
+A very special mention and shoutout to Ms Lizzie and Ms Yogini, who collectively made the wedding so special, they worked with such precision and expertise, they made sure what I envisioned was brought to reality with such ease. 
+They were always readily available from day one of planning till wedding day, to ensure timely planning and arrangements were made.`,
+    author: "- Vandana Daryani",
+  },
+  {
+    textOne: `We recently had the pleasure of working with Exotic Goa and Kelista, who organized our wedding event over two unforgettable days 
+on 15th and 16th January 2025 at Planet Hollywood Beach Resort, Goa. 
+From start to finish, their team was incredibly supportive, professional, and attentive to every detail.`,
+    textTwo: `Exotic Goa and Kelista went above and beyond to ensure that every aspect of our celebration was executed beautifully. 
+Their meticulous planning and flawless coordination made the entire event seamless and stress-free. 
+The decor was absolutely stunning, the arrangements were impeccable, and they accommodated all our specific requests with ease.
+Throughout the two-day celebration, their team was always available, proactive, and focused on ensuring that our guests were comfortable and that everything ran smoothly. 
+We highly recommend Exotic Goa and Kelista to anyone planning a wedding or any special event. 
+Special thanks to Seby, the owner, who was incredibly supportive and ensured everything went off without a hitch.`,
+    author: "- Udit Lunker",
+  },
+  {
+    textOne: `I got married in Nov 2024 in Goa and we stumbled upon Exotic Goa team through ads, hoardings - they are literally the most popular! 
+To our surprise, Janette, Sid and his entire team stand up to their promise and name - everything from planning to execution was just PERFECT!`,
+    textTwo: `Janette is very sweet and hardworking, dedicated her days and nights to my wedding, I felt so happy just to meet the person behind all the magic. 
+They know what they are doing, being a high maintenance client they managed to reach above and beyond my expectations in terms of decor, vibes and best part - real life was 100% as shown in sample pictures - LOVED THEM TO BITS - 
+I would get married again to my husband just to get their services haha. Jokes apart, brilliant team and the only choice one should make for GOA!`,
+    author: "- Anmol Gupta",
   },
 ];
+
 
 const settings = {
   dots: true,
@@ -159,7 +187,14 @@ function WeddingsPage() {
             data-aos-once="true"
             data-aos-delay={100}>
             <header className={styles.reelHeadijng}>Haldi</header>
-            <video autoPlay loop muted controls src={"https://res.cloudinary.com/duh71fcas/video/upload/v1754125278/Exotic%20data/Weddings%20Page/Haldi_aus1vu.mp4"}></video>
+            <video
+              autoPlay
+              loop
+              muted
+              controls
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754125278/Exotic%20data/Weddings%20Page/Haldi_aus1vu.mp4"
+              }></video>
           </div>
           <div
             className={styles.reelContainer}
@@ -167,7 +202,14 @@ function WeddingsPage() {
             data-aos-once="true"
             data-aos-delay={200}>
             <header className={styles.reelHeadijng}>Mehendi</header>
-            <video autoPlay loop muted controls src={"https://res.cloudinary.com/duh71fcas/video/upload/v1754124658/Exotic%20data/Weddings%20Page/Mehendi_j4weqc.mp4"}></video>
+            <video
+              autoPlay
+              loop
+              muted
+              controls
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754124658/Exotic%20data/Weddings%20Page/Mehendi_j4weqc.mp4"
+              }></video>
           </div>
 
           <div
@@ -176,7 +218,14 @@ function WeddingsPage() {
             data-aos-once="true"
             data-aos-delay={300}>
             <header className={styles.reelHeadijng}>Sangeet</header>
-            <video autoPlay loop muted controls src={"https://res.cloudinary.com/duh71fcas/video/upload/v1754124650/Exotic%20data/Weddings%20Page/Sangeet_jshjvs.mp4"}></video>
+            <video
+              autoPlay
+              loop
+              muted
+              controls
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754124650/Exotic%20data/Weddings%20Page/Sangeet_jshjvs.mp4"
+              }></video>
           </div>
           <div
             className={styles.reelContainer}
@@ -184,7 +233,14 @@ function WeddingsPage() {
             data-aos-once="true"
             data-aos-delay={400}>
             <header className={styles.reelHeadijng}>Wedding</header>
-            <video autoPlay loop muted controls src={"https://res.cloudinary.com/duh71fcas/video/upload/v1754124659/Exotic%20data/Weddings%20Page/Wedding_ej5gec.mp4"}></video>
+            <video
+              autoPlay
+              loop
+              muted
+              controls
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754124659/Exotic%20data/Weddings%20Page/Wedding_ej5gec.mp4"
+              }></video>
           </div>
           <div
             className={styles.reelContainer}
@@ -192,7 +248,14 @@ function WeddingsPage() {
             data-aos-once="true"
             data-aos-delay={500}>
             <header className={styles.reelHeadijng}>Hospitality</header>
-            <video autoPlay loop muted controls src={"https://res.cloudinary.com/duh71fcas/video/upload/v1754124640/Exotic%20data/Weddings%20Page/Hospitality_2_lts8bj.mp4"}></video>
+            <video
+              autoPlay
+              loop
+              muted
+              controls
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754124640/Exotic%20data/Weddings%20Page/Hospitality_2_lts8bj.mp4"
+              }></video>
           </div>
           <div
             className={styles.reelContainer}
@@ -200,7 +263,14 @@ function WeddingsPage() {
             data-aos-once="true"
             data-aos-delay={600}>
             <header className={styles.reelHeadijng}>Hospitality</header>
-            <video autoPlay loop muted controls src={"https://res.cloudinary.com/duh71fcas/video/upload/v1754124637/Exotic%20data/Weddings%20Page/Hospitality_wfdxjj.mov"}></video>
+            <video
+              autoPlay
+              loop
+              muted
+              controls
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1754124637/Exotic%20data/Weddings%20Page/Hospitality_wfdxjj.mov"
+              }></video>
           </div>
         </div>
       </div>
@@ -293,9 +363,10 @@ function WeddingsPage() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className={styles.testimonialsSubContainer}>
               <div className={styles.testimonialSubSub}>
-                <img src={testimonial.image} alt="testimonial" />
                 <div className={styles.testimonialContent}>
-                  <span>{testimonial.text}</span>
+                  <RiDoubleQuotesL className={styles.quoteIcon} />
+                 <span>{testimonial.textOne}</span>
+                 <span>{testimonial.textTwo}</span>
                   <header>{testimonial.author}</header>
                 </div>
               </div>
