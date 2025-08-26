@@ -51,9 +51,9 @@ function NavBar({ bgColor }) {
       className={`${bgColor == true ? styles.navAlt : styles.nav}`}>
       <div className={styles.hamburgerMenuContainer}>
         {!menuOpen ? (
-          <RxHamburgerMenu className={styles.menuIcon} onClick={toggleMenu} />
+          <RxHamburgerMenu className={`${styles.menuIcon} ${bgColor ? styles.iconAlt : ""}`} onClick={toggleMenu} />
         ) : (
-          <IoMdClose className={styles.menuIcon} onClick={toggleMenu} />
+          <IoMdClose className={`${styles.menuIcon} ${bgColor ? styles.iconAlt : ""}`} onClick={toggleMenu} />
         )}
       </div>
       {isMobile && (

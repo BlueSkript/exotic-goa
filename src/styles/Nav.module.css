@@ -151,8 +151,10 @@
   transition: 0.5s;
   scale: 1.2;
   z-index: 68;
- 
 
+}
+.iconAlt{
+  color: var(--primary-color);
 }
 
 
