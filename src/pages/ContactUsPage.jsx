@@ -48,6 +48,7 @@ function ContactUsPage() {
       {/* <ContactUsCarousel /> */}
       <div className={styles.landingVideoContainer}>
         <NavBar />
+     
         {!isMobile && (
           <video
             poster={poster}
