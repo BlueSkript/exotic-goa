@@ -38,6 +38,9 @@
   opacity: 1;
 }
 
+
+
+
 .landingVideoContainer video {
   width: 100%;
   height: 100%;
@@ -242,19 +245,20 @@
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 2rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.554)
-  );
+  ); */
 }
 
 .carouselSubContainer {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  /* background-color: red; */
 }
 
 .contentContainerLeft {
@@ -283,13 +287,13 @@
 }
 
 .content h1 {
-  font-family: var(--heading-font) !important;
+   font-family: var(--heading-font) !important;
   font-weight: 500;
   margin-bottom: 1rem;
   font-style: italic;
 }
 .contentContainerLeft header {
-  font-family: var(--heading-font) !important;
+   font-family: var(--heading-font) !important;
   font-weight: 500;
   font-size: 1.2em;
   font-weight: 350;
@@ -300,6 +304,8 @@
   display: inline;
   font-size: 1.4rem;
 }
+
+
 
 .homeContactUsBtn {
   text-decoration: none;
@@ -327,7 +333,7 @@
     padding: 0;
     padding-bottom: 2rem;
     margin-bottom: 0px;
-    height: 100%;
+  height: 100%;
   }
   .contactUsContainer {
     width: 90%;
@@ -430,9 +436,10 @@
   }
 
   .carouselContentContainer {
-    height: 100%;
-    margin-bottom: 0%;
+  height: 100%;
+  margin-bottom: 0%;
     bottom: 0%;
+  
   }
 
   .mapContainer {
@@ -448,12 +455,13 @@
   margin-bottom: 2rem;
 }
 
+
 .gradientFilter {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 2;
-
+  
   background-image: linear-gradient(
     to bottom,
     #00000000,
@@ -461,6 +469,8 @@
     rgba(0, 0, 0, 0.89)
   );
 }
+
+
 
 .carouselSubContainer {
   width: 90%;
@@ -496,13 +506,14 @@
 }
 
 .contentContainerLeft header {
-  font-family: var(--heading-font) !important;
+   font-family: var(--heading-font) !important;
   font-weight: 500;
   font-size: 1.2em;
+
 }
 
 .address {
-  font-family: var(--heading-font) !important;
+   font-family: var(--heading-font) !important;
   font-weight: 500;
 }
 
@@ -586,7 +597,7 @@
 
   .content h1 {
     text-align: center;
-    transform: skewX(10deg) !important;
+    transform: skewX(10deg) !important; 
     display: inline-block;
     font-size: 3rem;
   }
@@ -604,24 +615,29 @@
     scale: 1.2;
   }
 
+  
   .carouselContentContainer h5 {
     text-align: center;
     font-size: 2.3rem;
-    transform: skewX(10deg) !important;
-    display: inline-block;
+    transform: skewX(10deg) !important; 
+  display: inline-block;
+
   }
   .contentContainerLeft header {
-    transform: skewX(10deg) !important;
+    transform: skewX(10deg) !important; 
+    display: inline-block;
+  }
+  
+  .address{
+    transform: skewX(10deg) !important; 
+    display: inline-block;
+    
+  }
+
+  .formContainer h3{
+    transform: skewX(10deg) !important; 
     display: inline-block;
   }
 
-  .address {
-    transform: skewX(10deg) !important;
-    display: inline-block;
-  }
-
-  .formContainer h3 {
-    transform: skewX(10deg) !important;
-    display: inline-block;
-  }
+  
 }
