@@ -49,7 +49,7 @@ function ContactUsPage() {
       <div className={styles.landingVideoContainer}>
         <NavBar />
      
-        {!isMobile && (
+ 
           <video
             poster={poster}
             src={
@@ -58,7 +58,7 @@ function ContactUsPage() {
             muted
             autoPlay
             loop></video>
-        )}
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -90,7 +90,7 @@ function ContactUsPage() {
             </motion.h5>
           </div>
         </motion.div>
-        {isMobile && (
+        {/* {isMobile && (
           <Slider {...settings} className={styles.slider}>
             {mobileCarouselImages.map((img, index) => {
               return (
@@ -100,7 +100,7 @@ function ContactUsPage() {
               );
             })}
           </Slider>
-        )}
+        )} */}
       </div>
       <div className={styles.contactUsContainer}>
         <div className={styles.formContainer}>

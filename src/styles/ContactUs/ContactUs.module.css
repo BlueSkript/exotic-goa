@@ -233,7 +233,7 @@
   width: 100%;
   position: absolute;
   bottom: 0%;
-  height: 100vh;
+  height: 100%;
   z-index: 2;
   margin: 0 auto;
   font-family: "Josefin Sans", sans-serif;
