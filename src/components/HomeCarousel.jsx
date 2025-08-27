@@ -73,7 +73,7 @@ function HomeCarousel() {
             </div>
             <header>We create experiences</header>
             <p className={styles.address}>India, Goa</p>
-            <Link className={styles.homeContactUsBtnContainer} to={'/contact-us'}><a className={styles.homeContactUsBtn} href="">
+            <Link className={styles.homeContactUsBtnContainer} to={'/contact-us'}><a className={styles.homeContactUsBtn}>
               Contact Us
             </a></Link>
             

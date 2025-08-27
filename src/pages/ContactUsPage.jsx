@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 import poster from "/videoPosters/contactUsLandingPoster.png";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import mobileCarouselImages from '../../JSONs/Phone View.json'
+import mobileCarouselImages from "../../JSONs/Phone View.json";
 function ContactUsPage() {
   function sendToWhatsApp() {
     const name = document.getElementById("formname").value.trim();
@@ -22,7 +22,7 @@ function ContactUsPage() {
   }
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
@@ -48,14 +48,16 @@ function ContactUsPage() {
       {/* <ContactUsCarousel /> */}
       <div className={styles.landingVideoContainer}>
         <NavBar />
-        {!isMobile && (<video
-          poster={poster}
-          src={
-            "https://res.cloudinary.com/duh71fcas/video/upload/v1754122921/Exotic%20data/Contact%20Us/GATHERING_REEL_yuisib.mp4"
-          }
-          muted
-          autoPlay
-          loop></video>)}
+        {!isMobile && (
+          <video
+            poster={poster}
+            src={
+              "https://res.cloudinary.com/duh71fcas/video/upload/v1754122921/Exotic%20data/Contact%20Us/GATHERING_REEL_yuisib.mp4"
+            }
+            muted
+            autoPlay
+            loop></video>
+        )}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -87,15 +89,17 @@ function ContactUsPage() {
             </motion.h5>
           </div>
         </motion.div>
-          {isMobile && (<Slider {...settings} className={styles.slider}>
-        {mobileCarouselImages.map((img, index) => {
-          return (
-            <div key={index} className={styles.imgsSlide}>
-              <img src={img} alt={img} />
-            </div>
-          );
-        })}
-      </Slider>)}
+        {isMobile && (
+          <Slider {...settings} className={styles.slider}>
+            {mobileCarouselImages.map((img, index) => {
+              return (
+                <div key={index} className={styles.imgsSlide}>
+                  <img src={img} alt={img} />
+                </div>
+              );
+            })}
+          </Slider>
+        )}
       </div>
       <div className={styles.contactUsContainer}>
         <div className={styles.formContainer}>
