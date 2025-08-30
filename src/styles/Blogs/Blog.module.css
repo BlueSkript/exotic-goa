@@ -3,7 +3,7 @@
   height: 70vh;
 }
 
-.homeContactUsBtnContainer{
+.homeContactUsBtnContainer {
   text-decoration: none;
 }
 
@@ -212,10 +212,9 @@
   font-style: italic;
 }
 .contentContainerLeft header {
-   font-family: var(--heading-font) !important;
+  font-family: var(--heading-font) !important;
   font-weight: 500;
   font-size: 1.2em;
-
 }
 
 .contentContainerLeft .content p {
@@ -226,18 +225,16 @@
 }
 
 .address {
-   font-family: var(--heading-font) !important;
+  font-family: var(--heading-font) !important;
   font-weight: 500;
 }
 
 .carouselContentContainer h5 {
   text-align: right;
-   font-family: var(--heading-font) !important;
-  font-weight: 500;
-  font-size: 3rem;
+  font-family: var(--heading-font) !important;
+  font-size: 2.5rem;
+  font-weight: 200;
   font-style: italic;
-
-  font-weight: 500;
 }
 
 .homeContactUsBtn {
@@ -538,7 +535,7 @@
 
   .content h1 {
     text-align: center;
-    transform: skewX(10deg) !important; 
+    transform: skewX(10deg) !important;
     display: inline-block;
     font-size: 3rem;
   }
@@ -556,37 +553,32 @@
     scale: 1.2;
   }
 
-  
   .carouselContentContainer h5 {
     text-align: center;
     font-size: 2.3rem;
-    transform: skewX(10deg) !important; 
-  display: inline-block;
-
+    transform: skewX(10deg) !important;
+    display: inline-block;
   }
   .contentContainerLeft header {
-    transform: skewX(10deg) !important; 
+    transform: skewX(10deg) !important;
     display: inline-block;
   }
-  
-  .address{
-    transform: skewX(10deg) !important; 
+
+  .address {
+    transform: skewX(10deg) !important;
     display: inline-block;
-    
   }
-  .blogsContainer{
+  .blogsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .blogsContainer header{
+  .blogsContainer header {
     text-align: center;
-  
+
     width: max-content;
-    transform: skewX(10deg) !important; 
+    transform: skewX(10deg) !important;
     display: inline-block;
- 
-   
   }
 }

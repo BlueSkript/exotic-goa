@@ -295,6 +295,7 @@
   font-weight: 500;
   font-size: 1.2em;
   font-weight: 350;
+
 }
 
 .contentContainerLeft .content p {
@@ -517,9 +518,9 @@
 .carouselContentContainer h5 {
   text-align: right;
   font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 200;
   font-style: italic;
-  font-weight: 500;
 }
 
 .homeContactUsBtn {
@@ -610,6 +611,8 @@
     font-size: 2.3rem;
     transform: skewX(10deg) !important;
     display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 200;
   }
   .contentContainerLeft header {
     transform: skewX(10deg) !important;

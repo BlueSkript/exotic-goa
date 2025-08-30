@@ -31,8 +31,7 @@
   opacity: 1;
 }
 
-
-.homeContactUsBtnContainer{
+.homeContactUsBtnContainer {
   text-decoration: none;
 }
 .landingVideoContainer {
@@ -254,9 +253,8 @@
   font-family: var(--heading-font) !important;
   font-weight: 500;
   font-size: 1.2em;
-
 }
-.address{
+.address {
   font-family: var(--heading-font) !important;
   font-weight: 500;
 }
@@ -271,9 +269,9 @@
   text-align: right;
   font-family: var(--heading-font) !important;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 200;
   font-style: italic;
-  font-weight: 500;
 }
 
 .homeContactUsBtn {
@@ -297,11 +295,9 @@
   scale: 0.9;
 }
 
-.wideReel{
+.wideReel {
   width: 50%;
 }
-
-
 
 @media screen and (max-width: 1500px) {
   .carouselContentContainer {
@@ -309,14 +305,13 @@
     padding-bottom: 2rem;
   }
 
-  .weddingsReelsContainer{
+  .weddingsReelsContainer {
     width: 100%;
-  
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .carouselContentContainer{
+  .carouselContentContainer {
     justify-content: center;
     padding: 0;
     padding-bottom: 2rem;
@@ -328,7 +323,7 @@
 
   .weddingsReelsContainer {
     flex-direction: column;
-    
+
     width: 100%;
     flex-wrap: wrap;
     padding: 0px;
@@ -338,21 +333,18 @@
     width: 50%;
   }
 
-  .subtitleContainer span{
+  .subtitleContainer span {
     text-align: center;
   }
 
-  .navyReelContainer{
-    
+  .navyReelContainer {
     width: 90%;
   }
 
-  .navyReelContainer video{
-   
+  .navyReelContainer video {
     width: 100%;
   }
 }
-
 
 @media screen and (max-width: 700px) {
   .carouselContentContainer {
@@ -389,7 +381,7 @@
   }
 
   .content h1 {
-    transform: skewX(10deg) !important; 
+    transform: skewX(10deg) !important;
     display: inline-block;
     font-size: 3rem;
     text-align: center;
@@ -411,46 +403,40 @@
   .carouselContentContainer h5 {
     text-align: center;
     font-size: 2.3rem;
-    transform: skewX(10deg) !important; 
-  display: inline-block;
-
+    transform: skewX(10deg) !important;
+    display: inline-block;
   }
   .contentContainerLeft header {
-    transform: skewX(10deg) !important; 
+    transform: skewX(10deg) !important;
     display: inline-block;
   }
-  
-  .address{
-    transform: skewX(10deg) !important; 
+
+  .address {
+    transform: skewX(10deg) !important;
     display: inline-block;
-    
   }
 
   .howWeDoItSubContainer {
     grid-template-columns: 1fr;
   }
 
-  .reelContainer{
+  .reelContainer {
     width: 90%;
   }
 
-  .navyReelContainer{
-    
+  .navyReelContainer {
     width: 90%;
     height: 300px;
     object-fit: contain;
   }
 
-
-  .navyReelContainer video{
-   
+  .navyReelContainer video {
     width: 100%;
     height: 300px;
   }
 
-  .titleContainer h2{
-    transform: skewX(10deg) !important; 
+  .titleContainer h2 {
+    transform: skewX(10deg) !important;
     display: inline-block;
   }
 }
-

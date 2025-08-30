@@ -638,10 +638,9 @@
 .carouselContentContainer h5 {
   text-align: right;
   font-family: var(--heading-font) !important;
-
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 200;
   font-style: italic;
-  font-weight: 500;
 }
 
 .homeContactUsBtn {

@@ -206,7 +206,7 @@ function CorporatePage() {
         />
         <div className={styles.titleContainer}>
           <h2 data-aos="fade-up" data-aos-once="true">
-            Our Work For Navy
+            Our Work For Indian Navy
           </h2>
           <div
             className={styles.subtitleContainer}
