@@ -10,10 +10,10 @@ import howWeDoItTwo from "/Pictures/howwedoittwo.gif";
 import howWeDoItThree from "/Pictures/howwedoitthree.gif";
 import Slider from "react-slick";
 import NavBar from "../components/NavBar";
-import mobileCarouselImages from '../../JSONs/Phone View.json'
+import mobileCarouselImages from "../../JSONs/Phone View.json";
 import venueImgs from "../../JSONs/Venues.json";
 import landingVideoPoster from "/videoPosters/weddingsPageLoader.png";
-
+import { FiX } from "react-icons/fi";
 import { Link } from "react-router";
 
 const testimonials = [
@@ -83,8 +83,6 @@ I would get married again to my husband just to get their services haha. Jokes a
   },
 ];
 
-
-
 const settings = {
   dots: true,
   infinite: true,
@@ -103,12 +101,12 @@ const settings = {
 const speed = 30;
 function WeddingsPage() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  
-useEffect(() => {
-  const handleResize = () => setIsMobile(window.innerWidth < 768);
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const [duplicatedItems, setDuplicatedItems] = useState([]);
 
   useEffect(() => {
@@ -127,14 +125,16 @@ useEffect(() => {
       {/* <WeddingsCarousel /> */}
       <div className={styles.landingVideoContainer}>
         <NavBar />
-        {!isMobile && (<video
-          poster={landingVideoPoster}
-          src={
-            "https://res.cloudinary.com/duh71fcas/video/upload/v1754072376/Exotic%20data/Videos/weddings.mp4"
-          }
-          muted
-          autoPlay
-          loop></video>)}
+        {!isMobile && (
+          <video
+            poster={landingVideoPoster}
+            src={
+              "https://res.cloudinary.com/duh71fcas/video/upload/v1754072376/Exotic%20data/Videos/weddings.mp4"
+            }
+            muted
+            autoPlay
+            loop></video>
+        )}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -172,17 +172,18 @@ useEffect(() => {
               we will make the beginning <br /> special & memorable
             </motion.h5>
           </div>
-          
         </motion.div>
-        {isMobile && (<Slider {...settings} className={styles.slider}>
-        {mobileCarouselImages.map((img, index) => {
-          return (
-            <div key={index} className={styles.imgsSlide}>
-              <img src={img} alt={img} />
-            </div>
-          );
-        })}
-      </Slider>)}
+        {isMobile && (
+          <Slider {...settings} className={styles.slider}>
+            {mobileCarouselImages.map((img, index) => {
+              return (
+                <div key={index} className={styles.imgsSlide}>
+                  <img src={img} alt={img} />
+                </div>
+              );
+            })}
+          </Slider>
+        )}
       </div>
 
       <div className={styles.weddingsInGoaContainer}>
@@ -264,6 +265,21 @@ useEffect(() => {
             className={styles.reelContainer}
             data-aos="fade-up"
             data-aos-once="true"
+            data-aos-delay={400}>
+            <header className={styles.reelHeadijng}>Reception</header>
+            <video
+              autoPlay
+              loop
+              muted
+              controls
+              src={
+                "https://res.cloudinary.com/duh71fcas/video/upload/v1757218430/Exotic%20data/Home%20Page/Home%20Page%20-%20Corrousel%20Top/WhatsApp_Video_2025-09-07_at_5.59.47_AM_pwea3f.mp4"
+              }></video>
+          </div>
+          <div
+            className={styles.reelContainer}
+            data-aos="fade-up"
+            data-aos-once="true"
             data-aos-delay={500}>
             <header className={styles.reelHeadijng}>Hospitality</header>
             <video
@@ -275,7 +291,7 @@ useEffect(() => {
                 "https://res.cloudinary.com/duh71fcas/video/upload/v1754124640/Exotic%20data/Weddings%20Page/Hospitality_2_lts8bj.mp4"
               }></video>
           </div>
-          <div
+          {/* <div
             className={styles.reelContainer}
             data-aos="fade-up"
             data-aos-once="true"
@@ -289,7 +305,7 @@ useEffect(() => {
               src={
                 "https://res.cloudinary.com/duh71fcas/video/upload/v1754124637/Exotic%20data/Weddings%20Page/Hospitality_wfdxjj.mov"
               }></video>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -379,19 +395,43 @@ useEffect(() => {
 
         <Slider {...settings} className={styles.slider}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={styles.testimonialsSubContainer}>
+            <div
+              key={index}
+              className={styles.testimonialsSubContainer}
+              onClick={() => setSelectedTestimonial(testimonial)}>
               <div className={styles.testimonialSubSub}>
                 <div className={styles.testimonialContent}>
                   <RiDoubleQuotesL className={styles.quoteIcon} />
-                 <span>{testimonial.textOne}</span>
-                 <span>{testimonial.textTwo}</span>
+                  <span>{testimonial.textOne}</span>
+                  <span>{testimonial.textTwo}</span>
                   <header>{testimonial.author}</header>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
+
       </div>
+      {selectedTestimonial && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.testimonialSubSub}>
+            <div
+              className={`${styles.testimonialContent} ${styles.testimonialOpen}`}>
+              <div className={styles.testimonialIconsContainer}>
+                <RiDoubleQuotesL className={styles.quoteIcon} />
+                <button
+                  className={styles.closeButton}
+                  onClick={() => setSelectedTestimonial(null)}>
+                  <FiX size={24} />
+                </button>
+              </div>
+              <span>{selectedTestimonial.textOne}</span>
+              <span>{selectedTestimonial.textTwo}</span>
+              <header>{selectedTestimonial.author}</header>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

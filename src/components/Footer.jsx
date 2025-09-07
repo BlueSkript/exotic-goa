@@ -14,10 +14,10 @@ function Footer() {
     <>
       <footer className={styles.footer}>
         <img className={styles.footerLogo} src={logo} alt="" />
-        <span className={styles.logoDivDesc}>
+        {/* <span className={styles.logoDivDesc}>
           Welcome to Exotic Goa Events, a luxurious event company situated in
           the city of Margao.
-        </span>
+        </span> */}
         <div className={styles.socialsIconsContainer}>
           <a href="https://www.facebook.com/share/1F1Kuoah3Y/">
             <span className={styles.iconContainer}>

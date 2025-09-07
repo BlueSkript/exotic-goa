@@ -7,46 +7,47 @@ import styles from "../styles/Services/ServicesPage.module.css";
 import carouselPictures from '../../JSONs/Services section corousel.json'
 const cardData = [
   {
-    name: "Venue management",
-    content: `Whether you desire beachfront vistas or elegant ballroom settings, if you're in search for the ideal venue we have you covered.`,
+    name: "Venue Management",
+    content: `Whether you envision a romantic beach ceremony or a grand ballroom celebration, our team ensures you find the perfect venue and handles every detail to match your vision flawlessly.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074510/Exotic%20data/Services/decor.webp",
   },
   {
     name: "Event Concept & Design",
-    content: `From the initial 'First Meeting' to the memorable 'Last Dance, you can count on receiving 'Impeccable Personal Attention' and 'Expert Assistance' every step of the way.`,
+    content: `From the very first planning meeting to the final dance of the evening, our creative team provides personalized attention and expert guidance to craft a unique, memorable, and seamless event experience.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074510/Exotic%20data/Services/wedding.webp",
   },
   {
     name: "Hospitality & Logistics",
-    content: `Our comprehensive suite of hospitality services encompasses receiving RSVPs from your guests, overseeing their lodging arrangements and facilitating seamless coordination among various hotel departments.`,
+    content: `We manage RSVPs, guest accommodations, travel arrangements, and hotel coordination to ensure every aspect of hospitality and logistics runs smoothly, letting you and your guests enjoy the event stress-free.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074505/Exotic%20data/Services/hospitality.webp",
   },
   {
     name: "Artist Management",
-    content: `Our specialists excel at crafting entertainment that transforms your event into a larger-than-life experience. From live musicians to DJs, aerial performers to bands, we recommend and arrange the most incredible entertainers.`,
+    content: `Our experts curate and arrange entertainment that elevates your event. From DJs, live musicians, and bands to aerial performers and specialty acts, we connect you with talent that leaves lasting impressions.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074507/Exotic%20data/Services/vendor.webp",
   },
   {
     name: "Food & Beverage Services",
-    content: `We take pride in offering the most delectable cuisine and top-tier catering services for a range of occasions, including corporate events and weddings.`,
+    content: `We deliver world-class catering for weddings, corporate events, and celebrations. With delectable cuisine, professional service, and thoughtful presentation, our food and beverages create unforgettable dining experiences for your guests.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074508/Exotic%20data/Services/food.webp",
   },
   {
     name: "Technical Solutions",
-    content: `When the event crew is on board, there's no need for you to delve into technical details. Lights, camera, sound, and more are all set up and ready in our equipment arsenal. So, all you need to do is maintain the excitement and carry on with the show.`,
+    content: `Our technical team handles everything behind the scenes—sound, lights, staging, video, and more. We provide reliable equipment and support so your event runs smoothly while you focus on enjoying the moment.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074511/Exotic%20data/Services/clentservicing.webp",
   },
   {
     name: "Cooling Solutions",
-    content: `Exotic Event Cooling Solutions is a full-service rental company, providing cooling solutions, overhead and directional fans, etc.`,
+    content: `We offer professional event cooling rentals, including overhead fans, directional units, and portable systems. Our team ensures a comfortable atmosphere so your guests stay relaxed and enjoy every moment.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074510/Exotic%20data/Services/wedding.webp",
   },
   {
     name: "Luxury Furniture Rentals",
-    content: `We provide event furniture rentals and accessories for corporate events, entertainment events, premieres, conferences and much more.`,
+    content: `From conferences and premieres to weddings and private gatherings, we provide stylish, high-quality furniture and accessories that transform any event space into a sophisticated, comfortable, and elegant setting.`,
     icon: "https://res.cloudinary.com/duh71fcas/image/upload/v1754074509/Exotic%20data/Services/invitations.webp",
   },
 ];
+
 
 
 function OurServicesPage() {
@@ -96,13 +97,13 @@ function OurServicesPage() {
             ))}
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, translateX: 70 }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             className={styles.servicesGallery}>
             <VerticalCarousel images={carouselPictures} />
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </>
