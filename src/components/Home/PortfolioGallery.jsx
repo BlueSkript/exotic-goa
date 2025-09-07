@@ -7,11 +7,7 @@ import PopupGallery from "../PopupGallery";
 
 export default function PortfolioGallery() {
   const images = [
-    {
-      src: "https://res.cloudinary.com/duh71fcas/image/upload/v1754067237/Exotic%20Data/Home%20Page/Portfolio/IMG-20250528-WA0025.webp",
-      text: "Exotic Goa",
-      gallery: [...decorGallery, ...hospitalityGallery, ...miceGallery] // all images combined
-    },
+    
     {
       src: "https://res.cloudinary.com/duh71fcas/image/upload/v1754067216/Exotic%20Data/Home%20Page/Portfolio/IMG-20250528-WA0023.webp",
       text: "Exotic Goa Hospitality",
